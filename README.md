@@ -31,6 +31,7 @@ A personal portfolio presenting software engineering services, selected projects
 - [Contribution Guidelines](#contribution-guidelines)
 - [Current Scope and Limitations](#current-scope-and-limitations)
 - [Ownership and Licensing](#ownership-and-licensing)
+- [DISCLAIMER](#disclaimer)
 - [Related Documentation](#related-documentation)
 
 ## Overview
@@ -300,6 +301,10 @@ These boundaries describe the present implementation, not a commitment to future
 The portfolio identifies Naoyuki Christopher Higaki as its content owner. This repository does not currently include a standalone license file. Public access to source code does not by itself grant permission to reuse it; obtain permission before redistribution or commercial reuse.
 
 Third-party dependencies retain their own licenses. The three featured repositories have independent licensing terms; check each repository before using its code or media.
+
+## DISCLAIMER
+
+UNDER NO CIRCUMSTANCES SHOULD IMAGES OR EMOJIS BE INCLUDED DIRECTLY IN THE README FILE. ALL VISUAL MEDIA, INCLUDING SCREENSHOTS AND IMAGES OF THE APPLICATION, MUST BE STORED IN A DEDICATED FOLDER WITHIN THE PROJECT DIRECTORY. THIS FOLDER SHOULD BE CLEARLY STRUCTURED AND NAMED ACCORDINGLY TO INDICATE THAT IT CONTAINS ALL VISUAL CONTENT RELATED TO THE APPLICATION (FOR EXAMPLE, A FOLDER NAMED IMAGES, SCREENSHOTS, OR MEDIA). I AM NOT LIABLE OR RESPONSIBLE FOR ANY MALFUNCTIONS, DEFECTS, OR ISSUES THAT MAY OCCUR AS A RESULT OF COPYING, MODIFYING, OR USING THIS SOFTWARE. IF YOU ENCOUNTER ANY PROBLEMS OR ERRORS, PLEASE DO NOT ATTEMPT TO FIX THEM SILENTLY OR OUTSIDE THE PROJECT. INSTEAD, KINDLY SUBMIT A PULL REQUEST OR OPEN AN ISSUE ON THE CORRESPONDING GITHUB REPOSITORY, SO THAT IT CAN BE ADDRESSED APPROPRIATELY BY THE MAINTAINERS OR CONTRIBUTORS.
 
 ## Related Documentation
 

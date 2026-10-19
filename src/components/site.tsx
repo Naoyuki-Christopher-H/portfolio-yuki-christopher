@@ -94,7 +94,7 @@ export function Section({ children, className = "" }: { children: ReactNode; cla
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`rounded-3xl border border-border bg-card p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_var(--taupe)] ${className}`}>
+    <div className={`rounded-3xl border border-border bg-card p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] ${className}`}>
       {children}
     </div>
   );
@@ -111,7 +111,7 @@ export function CTA({ to, children, ghost }: { to: "/contact" | "/about" | "/ser
       className={
         ghost
           ? "inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium text-rose hover:underline"
-          : "inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-rose"
+          : "inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
       }
     >
       {children}
