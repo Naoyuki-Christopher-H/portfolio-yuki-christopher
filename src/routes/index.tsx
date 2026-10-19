@@ -14,7 +14,7 @@ function Index() {
       <section className="bg-hero">
         <div className="animate-rise mx-auto max-w-5xl px-6 pb-28 pt-28 text-center md:pt-40">
           <p className="text-sm font-medium text-rose">Higaki, Naoyuki Christopher</p>
-          <h1 className="mt-4 text-6xl font-semibold leading-[1.02] md:text-8xl">
+          <h1 className="mt-4 text-4xl font-semibold leading-[1.12] sm:text-6xl md:text-8xl">
             <span className="text-gradient">Software,</span>
             <br />
             <span className="text-foreground">thoughtfully engineered.</span>

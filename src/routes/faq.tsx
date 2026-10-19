@@ -23,9 +23,9 @@ function Faq() {
         <div className="mx-auto max-w-3xl divide-y divide-border border-y border-border">
           {QA.map(([q, a]) => (
             <details key={q} className="group py-6">
-              <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
-                {q}
-                <span className="text-2xl text-rose transition-transform group-open:rotate-45">+</span>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium">
+                <span className="min-w-0">{q}</span>
+                <span aria-hidden="true" className="shrink-0 text-2xl text-rose transition-transform group-open:rotate-45">+</span>
               </summary>
               <p className="mt-3 text-foreground/70">{a}</p>
             </details>
