@@ -1,42 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { Card, meta, PageHero, Section } from "@/components/site";
 
 export const Route = createFileRoute("/testimonials")({
-  head: () => meta("Work & Testimonials", "Case studies and feedback on projects by Naoyuki Christopher Higaki."),
+  head: () => meta("Featured Projects", "Explore Harmonie Budget Tracker, Campus Eats and Fake Restaurant API by Naoyuki Christopher Higaki, with source code on GitHub."),
   component: Testimonials,
 });
 
 const CASES = [
-  ["Inventory Management System", "ASP.NET Core MVC · EF Core · SQL Server", "A role-based web app for tracking stock, suppliers and orders with reporting."],
-  ["Desktop Scheduling Tool", "WPF · XAML · C#", "A responsive Windows app for managing schedules with an MVVM architecture."],
-  ["Android Task Companion", "Kotlin · Android", "A lightweight offline-first productivity app."],
-];
-
-const QUOTES = [
-  ["Clear communicator and careful engineer — the code was a pleasure to review.", "Project collaborator"],
-  ["Delivered a solid, well-structured solution on time.", "Academic supervisor"],
+  ["Harmonie Budget Tracker", "Kotlin · Android · MVVM · Gson", "An offline Android app for tracking daily expenses, creating custom categories, setting monthly budget goals and viewing spending summaries in a custom pie chart. Local JSON storage keeps data available offline and separate for each user.", "https://github.com/HChristopherNaoyuki/harmonie-budget-app-kt", "Material Design · Android 7.0+ · Target API 36"],
+  ["Campus Eats", "Kotlin · Room · Firebase", "An Android application built to streamline university dining, reduce queues and replace manual transaction recording. A hybrid offline-first architecture combines local Room storage, Firebase Realtime Database synchronization, Firebase Authentication and a REST API client for catalog integration.", "https://github.com/HChristopherNaoyuki/campus-eats-app-kt", "Campus dining · Offline-first · Cloud synchronization"],
+  ["Fake Restaurant API", "ASP.NET Core · Entity Framework Core · REST", "A mock restaurant ordering service for testing, learning and development. REST endpoints simulate restaurant details, menus, orders and users, with documentation covering setup, architecture, data models and integration.", "https://github.com/HChristopherNaoyuki/fake-restaurant-api", "Mock data · API documentation · Integration testing"],
 ];
 
 function Testimonials() {
   return (
     <>
-      <PageHero eyebrow="Work" title="Built with care." />
+      <PageHero eyebrow="Work" title="My top three projects.">Android applications and a REST API, built around practical problems.</PageHero>
       <Section>
         <div className="grid gap-5 md:grid-cols-3">
-          {CASES.map(([t, s, d]) => (
-            <Card key={t}>
+          {CASES.map(([t, s, d, url, details]) => (
+            <Card key={t} className="flex h-full flex-col">
               <p className="text-xs text-rose">{s}</p>
-              <h3 className="mt-2 text-xl font-semibold">{t}</h3>
+              <h2 className="mt-2 text-xl font-semibold">{t}</h2>
               <p className="mt-3 text-foreground/70">{d}</p>
+              <p className="mb-6 mt-4 text-xs leading-relaxed text-foreground/70">{details}</p>
+              <a href={url} target="_blank" rel="noreferrer" className="mt-auto inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground underline decoration-rose underline-offset-4">View on GitHub <ArrowUpRight aria-hidden="true" className="size-4" /></a>
             </Card>
-          ))}
-        </div>
-        <div className="mt-20 grid gap-5 md:grid-cols-2">
-          {QUOTES.map(([q, who]) => (
-            <figure key={q} className="rounded-3xl bg-secondary p-10">
-              <blockquote className="text-2xl font-medium leading-snug">“{q}”</blockquote>
-              <figcaption className="mt-6 text-sm text-foreground/60">— {who}</figcaption>
-            </figure>
           ))}
         </div>
       </Section>

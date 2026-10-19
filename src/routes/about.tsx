@@ -13,7 +13,7 @@ const GROUPS: [string, string[]][] = [
   ["Databases & SQL", ["Microsoft SQL Server", "T-SQL", "MySQL", "Oracle SQL", "PL/SQL"]],
   ["Version Control", ["Git", "GitHub"]],
   ["Tools & IDEs", ["Visual Studio", "Visual Studio Code", "Android Studio", "Oracle SQL Developer"]],
-  ["Preferred OS", ["Linux (primary)", "macOS (secondary)", "Windows (VM)"]],
+  ["Preferred OS", ["Fedora Linux (primary)", "macOS (secondary)", "Windows 10 & 11 (VMs)"]],
   ["Focus", ["Software Engineering", "Software Development", "Computer Science"]],
   ["Language", ["English"]],
 ];

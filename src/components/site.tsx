@@ -39,16 +39,16 @@ const NAV = [
 export function Header() {
   return (
     <header className="glass sticky top-0 z-50 border-b border-border">
-      <nav className="mx-auto flex h-12 max-w-5xl items-center justify-between px-6 text-xs">
-        <Link to="/" className="font-semibold tracking-tight text-foreground">
+      <nav aria-label="Main navigation" className="mx-auto flex min-h-14 max-w-5xl flex-wrap items-center justify-between gap-x-6 px-4 text-xs sm:flex-nowrap sm:px-6">
+        <Link to="/" className="flex min-h-11 shrink-0 items-center font-semibold text-foreground">
           Naoyuki
         </Link>
-        <div className="flex gap-5 overflow-x-auto">
+        <div className="flex w-full flex-wrap justify-between gap-x-3 sm:w-auto sm:gap-5">
           {NAV.map(([to, label]) => (
             <Link
               key={to}
               to={to}
-              className="whitespace-nowrap text-foreground/70 transition-colors hover:text-foreground"
+              className="flex min-h-11 items-center whitespace-nowrap text-foreground/70 transition-colors hover:text-foreground"
               activeProps={{ className: "text-rose" }}
             >
               {label}
@@ -63,7 +63,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/60">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-10 text-xs text-muted-foreground md:flex-row md:justify-between">
+      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-10 text-xs text-foreground/70 md:flex-row md:justify-between">
         <p>© {new Date().getFullYear()} Higaki, Naoyuki Christopher. All rights reserved.</p>
         <div className="flex flex-wrap gap-5">
           <Link to="/privacy" className="hover:text-foreground">Privacy Policy</Link>
@@ -81,7 +81,7 @@ export function PageHero({ eyebrow, title, children }: { eyebrow: string; title:
     <section className="bg-hero">
       <div className="animate-rise mx-auto max-w-4xl px-6 pb-20 pt-24 text-center md:pt-32">
         <p className="text-sm font-medium text-rose">{eyebrow}</p>
-        <h1 className="mt-3 text-5xl font-semibold leading-[1.05] text-foreground md:text-7xl">{title}</h1>
+        <h1 className="mt-3 break-words text-4xl font-semibold leading-[1.12] text-foreground sm:text-5xl md:text-7xl">{title}</h1>
         {children && <div className="mx-auto mt-6 max-w-2xl text-lg text-foreground/70 md:text-xl">{children}</div>}
       </div>
     </section>

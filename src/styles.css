@@ -109,9 +109,10 @@
     color: var(--color-foreground);
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.011em;
+    letter-spacing: 0;
   }
-  h1, h2, h3 { letter-spacing: -0.03em; }
+  h1, h2, h3 { letter-spacing: 0; }
+  :focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
 }
 
 @utility bg-hero { background-image: var(--gradient-hero); }
@@ -119,3 +120,7 @@
 @utility glass { background-color: color-mix(in oklab, var(--cream) 75%, transparent); backdrop-filter: saturate(180%) blur(20px); }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 @utility animate-rise { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
