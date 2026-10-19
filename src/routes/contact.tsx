@@ -23,10 +23,10 @@ function Contact() {
       <Section>
         <div className="grid gap-5 md:grid-cols-2">
           {PROFILES.map(([l, h, u]) => (
-            <a key={l} href={u} target="_blank" rel="noreferrer">
+            <a key={l} href={u} target="_blank" rel="noreferrer" className="min-w-0">
               <Card>
                 <p className="text-sm text-muted-foreground">{l}</p>
-                <p className="mt-1 text-xl font-semibold">{h}</p>
+                <p className="mt-1 break-words text-xl font-semibold">{h}</p>
                 <p className="mt-4 text-sm text-rose">Visit ›</p>
               </Card>
             </a>
