@@ -33,6 +33,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -68,35 +69,37 @@
 
 :root {
   --radius: 1.25rem;
-  --rose: oklch(0.69 0.075 40);
-  --blush: oklch(0.87 0.025 25);
-  --cream: oklch(0.975 0.008 60);
-  --taupe: oklch(0.65 0.035 35);
-  --espresso: oklch(0.34 0.025 45);
+  --rose: oklch(0.52 0.065 35);
+  --blush: oklch(0.945 0.018 35);
+  --cream: oklch(0.98 0.005 55);
+  --taupe: oklch(0.50 0.018 40);
+  --espresso: oklch(0.33 0.018 40);
   --background: var(--cream);
   --foreground: var(--espresso);
-  --card: oklch(0.99 0.004 60);
+  --card: oklch(0.99 0.003 55);
   --card-foreground: var(--espresso);
   --popover: var(--cream);
   --popover-foreground: var(--espresso);
   --primary: var(--espresso);
+  --primary-hover: oklch(0.40 0.035 35);
   --primary-foreground: var(--cream);
   --secondary: var(--blush);
   --secondary-foreground: var(--espresso);
-  --muted: oklch(0.94 0.014 40);
+  --muted: oklch(0.955 0.009 45);
   --muted-foreground: var(--taupe);
   --accent: var(--rose);
   --accent-foreground: var(--cream);
   --destructive: var(--rose);
   --destructive-foreground: var(--cream);
-  --border: oklch(0.87 0.025 25 / 70%);
+  --border: oklch(0.87 0.015 40 / 55%);
   --input: var(--blush);
   --ring: var(--rose);
   --chart-1: var(--rose); --chart-2: var(--blush); --chart-3: var(--taupe); --chart-4: var(--espresso); --chart-5: var(--cream);
   --sidebar: var(--cream); --sidebar-foreground: var(--espresso); --sidebar-primary: var(--espresso); --sidebar-primary-foreground: var(--cream);
   --sidebar-accent: var(--blush); --sidebar-accent-foreground: var(--espresso); --sidebar-border: var(--blush); --sidebar-ring: var(--rose);
-  --gradient-hero: linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%);
+  --gradient-hero: linear-gradient(180deg, var(--cream) 0%, var(--blush) 48%, var(--cream) 100%);
   --gradient-text: linear-gradient(120deg, var(--espresso) 0%, var(--rose) 100%);
+  --shadow-card: 0 20px 40px -20px color-mix(in oklab, var(--espresso) 18%, transparent);
 }
 
 @layer base {
