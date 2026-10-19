@@ -4,3 +4,6 @@
 - [x] Improve mobile layout and search metadata; verify pages and navigation.
 - [x] Rewrite both project README documents with complete guidance and linked tables of contents.
 - [x] Validate documentation links, commands and source references.
+- [ ] Harmonize the website palette and transitions without changing content.
+- [ ] Add the supplied README disclaimer with a linked contents entry.
+- [ ] Verify the polished pages and README requirements.
