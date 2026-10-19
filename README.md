@@ -41,45 +41,45 @@ Content is maintained in the source code. The current implementation does not us
 
 ## Pages and Visitor Experience
 
-| Page | URL path | Purpose |
-| --- | --- | --- |
-| Home | `/` | Introduction, technology stack and links to services and profiles. |
-| About | `/about` | Background, skills, development tools and operating-system preferences. |
-| Services | `/services` | Web, desktop, Android, database, systems and code-review services. |
-| Work | `/testimonials` | The three featured projects with links to their source repositories. |
-| Blog | `/blog` | The current article listing. |
-| Article | `/blog/linux-macos-windows-vms` | The full Fedora, macOS and Windows virtual-machine article. |
-| FAQ | `/faq` | Common questions in expandable sections. |
-| Contact | `/contact` | LinkedIn, GitHub and LeetCode profiles, plus public support wallet addresses. |
-| Privacy Policy | `/privacy` | Information about data handling and external services. |
-| Terms | `/terms` | Conditions for using the portfolio. |
+| Page           | URL path                        | Purpose                                                                       |
+| -------------- | ------------------------------- | ----------------------------------------------------------------------------- |
+| Home           | `/`                             | Introduction, technology stack and links to services and profiles.            |
+| About          | `/about`                        | Background, skills, development tools and operating-system preferences.       |
+| Services       | `/services`                     | Web, desktop, Android, database, systems and code-review services.            |
+| Work           | `/testimonials`                 | The three featured projects with links to their source repositories.          |
+| Blog           | `/blog`                         | The current article listing.                                                  |
+| Article        | `/blog/linux-macos-windows-vms` | The full Fedora, macOS and Windows virtual-machine article.                   |
+| FAQ            | `/faq`                          | Common questions in expandable sections.                                      |
+| Contact        | `/contact`                      | LinkedIn, GitHub and LeetCode profiles, plus public support wallet addresses. |
+| Privacy Policy | `/privacy`                      | Information about data handling and external services.                        |
+| Terms          | `/terms`                        | Conditions for using the portfolio.                                           |
 
 The Work page retains `/testimonials` as its URL, but currently displays projects rather than testimonial quotes. Unknown URLs show a custom page-not-found screen. Shared navigation and footer links are available across the site.
 
 ## Featured Projects
 
-| Project | Summary | Source repository |
-| --- | --- | --- |
+| Project                 | Summary                                                                                                                 | Source repository                                                                       |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Harmonie Budget Tracker | Offline Android expense tracking, categories, monthly budgets and spending charts; Kotlin, MVVM and local JSON storage. | [harmonie-budget-app-kt](https://github.com/HChristopherNaoyuki/harmonie-budget-app-kt) |
-| Campus Eats | Android campus dining with local Room storage, Firebase synchronization, authentication and REST catalog integration. | [campus-eats-app-kt](https://github.com/HChristopherNaoyuki/campus-eats-app-kt) |
-| Fake Restaurant API | A mock restaurant ordering API for learning, testing and integration; ASP.NET Core and Entity Framework Core. | [fake-restaurant-api](https://github.com/HChristopherNaoyuki/fake-restaurant-api) |
+| Campus Eats             | Android campus dining with local Room storage, Firebase synchronization, authentication and REST catalog integration.   | [campus-eats-app-kt](https://github.com/HChristopherNaoyuki/campus-eats-app-kt)         |
+| Fake Restaurant API     | A mock restaurant ordering API for learning, testing and integration; ASP.NET Core and Entity Framework Core.           | [fake-restaurant-api](https://github.com/HChristopherNaoyuki/fake-restaurant-api)       |
 
 These technologies describe the featured projects. They are not dependencies or services used by this portfolio. For application setup, API contracts and project-specific licenses, consult each linked repository.
 
 ## Technology and Architecture
 
-| Technology | Role in this website |
-| --- | --- |
-| TanStack Start | React application framework and server rendering. |
-| TanStack Router | File-based routing and page metadata. |
-| React 19 and TypeScript | User interface and typed application code. |
-| TanStack Query | A query client created per router instance and provided through the root layout. |
-| Tailwind CSS v4 | Styling through semantic tokens in the global stylesheet. |
-| Radix UI and local UI components | Reusable interface controls available to the application. |
-| Lucide React | Interface icons. |
-| Vite and Lovable configuration | Development tooling and production build configuration. |
-| Vitest and Testing Library | Automated tests in a simulated browser environment. |
-| Bun | Dependency installation and script execution; the repository includes `bun.lock`. |
+| Technology                       | Role in this website                                                              |
+| -------------------------------- | --------------------------------------------------------------------------------- |
+| TanStack Start                   | React application framework and server rendering.                                 |
+| TanStack Router                  | File-based routing and page metadata.                                             |
+| React 19 and TypeScript          | User interface and typed application code.                                        |
+| TanStack Query                   | A query client created per router instance and provided through the root layout.  |
+| Tailwind CSS v4                  | Styling through semantic tokens in the global stylesheet.                         |
+| Radix UI and local UI components | Reusable interface controls available to the application.                         |
+| Lucide React                     | Interface icons.                                                                  |
+| Vite and Lovable configuration   | Development tooling and production build configuration.                           |
+| Vitest and Testing Library       | Automated tests in a simulated browser environment.                               |
+| Bun                              | Dependency installation and script execution; the repository includes `bun.lock`. |
 
 `src/router.tsx` creates the router and query client. `src/routes/__root.tsx` provides the document shell, shared layout, query provider and error screens. Individual content routes supply their own page metadata. The nested blog parent renders its child pages through an `Outlet`.
 
@@ -145,15 +145,15 @@ The current portfolio pages do not require a project-specific API key or databas
 
 Configuration is held in these files:
 
-| File | What it controls |
-| --- | --- |
-| `vite.config.ts` | Lovable's Vite integration and custom server entry. |
-| `tsconfig.json` | TypeScript rules and the `@/` alias for `src/`. |
-| `vitest.config.ts` | Test file selection, browser simulation and aliases. |
-| `eslint.config.js` | Code-quality checks. |
-| `.prettierrc` | Formatting conventions. |
-| `bunfig.toml` | Installation settings, including a 24-hour package release-age guard and explicit exceptions. |
-| `src/styles.css` | Fonts, colors, layout utilities and motion preferences. |
+| File               | What it controls                                                                              |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| `vite.config.ts`   | Lovable's Vite integration and custom server entry.                                           |
+| `tsconfig.json`    | TypeScript rules and the `@/` alias for `src/`.                                               |
+| `vitest.config.ts` | Test file selection, browser simulation and aliases.                                          |
+| `eslint.config.js` | Code-quality checks.                                                                          |
+| `.prettierrc`      | Formatting conventions.                                                                       |
+| `bunfig.toml`      | Installation settings, including a 24-hour package release-age guard and explicit exceptions. |
+| `src/styles.css`   | Fonts, colors, layout utilities and motion preferences.                                       |
 
 Never place private credentials in source code or browser-exposed variables. If future features need secrets, configure them through the hosting platform's secret management.
 
@@ -161,16 +161,16 @@ Never place private credentials in source code or browser-exposed variables. If 
 
 Run these commands from the project root.
 
-| Command | Purpose | Notes |
-| --- | --- | --- |
-| `bun run dev` | Start the development server. | Use in a standalone checkout; the Lovable sandbox already manages its server. |
-| `bun run build` | Create the production build. | In Lovable, builds run automatically after edits. |
-| `bun run build:dev` | Build using development mode. | Not a substitute for a production release check. |
-| `bun run preview` | Start Vite's build-preview command. | Preview behavior depends on the generated server output; it does not publish the site. |
-| `bun run test` | Run all automated tests once. | Uses Vitest. |
-| `bun run test:watch` | Run tests during local development. | Watches for changes. |
-| `bun run lint` | Check code quality and formatting rules. | Review and resolve reported issues. |
-| `bun run format` | Format supported project files. | Rewrites files; review the diff before submitting changes. |
+| Command              | Purpose                                  | Notes                                                                                  |
+| -------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
+| `bun run dev`        | Start the development server.            | Use in a standalone checkout; the Lovable sandbox already manages its server.          |
+| `bun run build`      | Create the production build.             | In Lovable, builds run automatically after edits.                                      |
+| `bun run build:dev`  | Build using development mode.            | Not a substitute for a production release check.                                       |
+| `bun run preview`    | Start Vite's build-preview command.      | Preview behavior depends on the generated server output; it does not publish the site. |
+| `bun run test`       | Run all automated tests once.            | Uses Vitest.                                                                           |
+| `bun run test:watch` | Run tests during local development.      | Watches for changes.                                                                   |
+| `bun run lint`       | Check code quality and formatting rules. | Review and resolve reported issues.                                                    |
+| `bun run format`     | Format supported project files.          | Rewrites files; review the diff before submitting changes.                             |
 
 There is no dedicated type-check script in `package.json`. Do not refer contributors to a command that has not been defined.
 
@@ -259,18 +259,18 @@ Review the Privacy Policy and Terms with appropriate legal advice when site beha
 
 ## Troubleshooting
 
-| Problem | Likely cause | Recommended action |
-| --- | --- | --- |
-| Installation fails with a lockfile error. | Manifest and lockfile differ. | Restore matching files or intentionally update dependencies and review changes. |
-| A newly released dependency will not install. | Bun's release-age guard blocks it. | Wait for the configured period; do not bypass the guard without an approved reason. |
-| A page shows the not-found screen. | Missing or incorrectly named route file. | Check the route naming guide and let route generation run. |
-| A route type refers to a missing path. | A link was added before its destination route. | Create or correct the route file; do not suppress the error with a cast. |
-| Blog child pages do not appear. | The parent no longer renders `Outlet`. | Restore the parent route's `Outlet`. |
-| Long text clips on phones. | A constrained element cannot wrap. | Check the affected page and shared layout; add appropriate wrapping and retest. |
-| Styling breaks after configuration changes. | Duplicate plugins or invalid CSS imports. | Restore the shared Vite integration and keep CSS imports at the top of the stylesheet. |
-| Wallet copying fails. | Clipboard restrictions or permission denial. | Test on HTTPS and confirm browser permissions; the visible address can still be selected manually. |
-| Published pages still show old content. | Preview changes have not been published, or cached content is displayed. | Confirm publishing completed, then reload and inspect the public site. |
-| An unexpected error screen appears. | Rendering or request processing failed. | Inspect browser and hosting logs; do not expose stack traces to visitors. |
+| Problem                                       | Likely cause                                                             | Recommended action                                                                                 |
+| --------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Installation fails with a lockfile error.     | Manifest and lockfile differ.                                            | Restore matching files or intentionally update dependencies and review changes.                    |
+| A newly released dependency will not install. | Bun's release-age guard blocks it.                                       | Wait for the configured period; do not bypass the guard without an approved reason.                |
+| A page shows the not-found screen.            | Missing or incorrectly named route file.                                 | Check the route naming guide and let route generation run.                                         |
+| A route type refers to a missing path.        | A link was added before its destination route.                           | Create or correct the route file; do not suppress the error with a cast.                           |
+| Blog child pages do not appear.               | The parent no longer renders `Outlet`.                                   | Restore the parent route's `Outlet`.                                                               |
+| Long text clips on phones.                    | A constrained element cannot wrap.                                       | Check the affected page and shared layout; add appropriate wrapping and retest.                    |
+| Styling breaks after configuration changes.   | Duplicate plugins or invalid CSS imports.                                | Restore the shared Vite integration and keep CSS imports at the top of the stylesheet.             |
+| Wallet copying fails.                         | Clipboard restrictions or permission denial.                             | Test on HTTPS and confirm browser permissions; the visible address can still be selected manually. |
+| Published pages still show old content.       | Preview changes have not been published, or cached content is displayed. | Confirm publishing completed, then reload and inspect the public site.                             |
+| An unexpected error screen appears.           | Rendering or request processing failed.                                  | Inspect browser and hosting logs; do not expose stack traces to visitors.                          |
 
 In the Lovable sandbox, diagnostic files may be available under `/tmp/observability/`, including `build-errors.log` and `runtime-errors.log`. These are environment-specific and may not exist in a local checkout. Check for file presence before reading them.
 

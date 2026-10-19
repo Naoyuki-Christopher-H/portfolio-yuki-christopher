@@ -38,20 +38,20 @@ Keep the existing routing framework. Do not add React Router, `BrowserRouter`, a
 
 Paths below are relative to this directory.
 
-| File | Public URL | Responsibility |
-| --- | --- | --- |
-| `__root.tsx` | All pages | Document shell, shared navigation and footer, query provider and error screens. |
-| `index.tsx` | `/` | Portfolio introduction and overview. |
-| `about.tsx` | `/about` | Background, skills, tools and operating-system preferences. |
-| `services.tsx` | `/services` | Development services. |
-| `testimonials.tsx` | `/testimonials` | Three featured projects and external repository links; navigation label is Work. |
-| `blog.tsx` | `/blog` parent | Structural parent that renders `Outlet`, not a separate article listing. |
-| `blog.index.tsx` | `/blog` | Blog listing; route declaration is `/blog/`. |
-| `blog.linux-macos-windows-vms.tsx` | `/blog/linux-macos-windows-vms` | Full operating-system article. |
-| `faq.tsx` | `/faq` | Expandable questions and answers. |
-| `contact.tsx` | `/contact` | External profiles and support wallet addresses. |
-| `privacy.tsx` | `/privacy` | Privacy information. |
-| `terms.tsx` | `/terms` | Website terms. |
+| File                               | Public URL                      | Responsibility                                                                   |
+| ---------------------------------- | ------------------------------- | -------------------------------------------------------------------------------- |
+| `__root.tsx`                       | All pages                       | Document shell, shared navigation and footer, query provider and error screens.  |
+| `index.tsx`                        | `/`                             | Portfolio introduction and overview.                                             |
+| `about.tsx`                        | `/about`                        | Background, skills, tools and operating-system preferences.                      |
+| `services.tsx`                     | `/services`                     | Development services.                                                            |
+| `testimonials.tsx`                 | `/testimonials`                 | Three featured projects and external repository links; navigation label is Work. |
+| `blog.tsx`                         | `/blog` parent                  | Structural parent that renders `Outlet`, not a separate article listing.         |
+| `blog.index.tsx`                   | `/blog`                         | Blog listing; route declaration is `/blog/`.                                     |
+| `blog.linux-macos-windows-vms.tsx` | `/blog/linux-macos-windows-vms` | Full operating-system article.                                                   |
+| `faq.tsx`                          | `/faq`                          | Expandable questions and answers.                                                |
+| `contact.tsx`                      | `/contact`                      | External profiles and support wallet addresses.                                  |
+| `privacy.tsx`                      | `/privacy`                      | Privacy information.                                                             |
+| `terms.tsx`                        | `/terms`                        | Website terms.                                                                   |
 
 The two blog files associated with `/blog` have different jobs: the parent provides the nesting boundary, while the index child provides the visible listing. They are not competing home pages.
 
@@ -75,18 +75,18 @@ Preserve `Outlet`: child pages cannot render without it. Every parent route that
 
 The examples in this table describe supported patterns. Only the routes in the inventory above are currently implemented.
 
-| Pattern | Example URL or behavior | Notes |
-| --- | --- | --- |
-| `index.tsx` | `/` | Root index page. |
-| `about.tsx` | `/about` | Simple content page. |
-| `blog.index.tsx` | `/blog` | Index child of `blog.tsx`. |
-| `blog.article.tsx` | `/blog/article` | Child route using dot-separated file names. |
-| `users/index.tsx` | `/users` | Directory-based index pattern. |
-| `users/$id.tsx` | `/users/:id` | Required dynamic segment; use a bare `$` in the file name. |
-| `posts/{-$category}.tsx` | `/posts/:category?` | Optional segment. |
-| `files/$.tsx` | `/files/*` | Catch-all segment; read its value through `_splat`. |
-| `_layout.tsx` | No extra URL segment | Pathless layout that must render its children through `Outlet`. |
-| `__root.tsx` | All routes | The application's root shell. |
+| Pattern                  | Example URL or behavior | Notes                                                           |
+| ------------------------ | ----------------------- | --------------------------------------------------------------- |
+| `index.tsx`              | `/`                     | Root index page.                                                |
+| `about.tsx`              | `/about`                | Simple content page.                                            |
+| `blog.index.tsx`         | `/blog`                 | Index child of `blog.tsx`.                                      |
+| `blog.article.tsx`       | `/blog/article`         | Child route using dot-separated file names.                     |
+| `users/index.tsx`        | `/users`                | Directory-based index pattern.                                  |
+| `users/$id.tsx`          | `/users/:id`            | Required dynamic segment; use a bare `$` in the file name.      |
+| `posts/{-$category}.tsx` | `/posts/:category?`     | Optional segment.                                               |
+| `files/$.tsx`            | `/files/*`              | Catch-all segment; read its value through `_splat`.             |
+| `_layout.tsx`            | No extra URL segment    | Pathless layout that must render its children through `Outlet`. |
+| `__root.tsx`             | All routes              | The application's root shell.                                   |
 
 Allow the generator to update route types after adding or renaming files. Do not edit `src/routeTree.gen.ts` or suppress missing-route errors with type casts.
 
@@ -185,18 +185,18 @@ Canonical tags are not currently implemented. If adding them, use the approved p
 
 ## Content and Shared Components
 
-| Source | Content or behavior maintained there |
-| --- | --- |
-| `src/components/site.tsx` | Shared navigation, footer, metadata, profile URLs, wallet addresses and portfolio display elements. |
-| `src/components/ui/` | Reusable controls and interface primitives. |
-| `src/routes/index.tsx` | Home-page technology stack and introductory sections. |
-| `src/routes/about.tsx` | Skill and background groups. |
-| `src/routes/services.tsx` | Service descriptions. |
-| `src/routes/testimonials.tsx` | Featured project summaries and repository links. |
-| `src/routes/contact.tsx` | Visible profile names and contact layout. |
-| `src/routes/faq.tsx` | Questions and answers. |
-| `src/content/linux-article.ts` | Full supplied article, title and description. |
-| `src/styles.css` | Semantic design tokens, global styles and motion preferences. |
+| Source                         | Content or behavior maintained there                                                                |
+| ------------------------------ | --------------------------------------------------------------------------------------------------- |
+| `src/components/site.tsx`      | Shared navigation, footer, metadata, profile URLs, wallet addresses and portfolio display elements. |
+| `src/components/ui/`           | Reusable controls and interface primitives.                                                         |
+| `src/routes/index.tsx`         | Home-page technology stack and introductory sections.                                               |
+| `src/routes/about.tsx`         | Skill and background groups.                                                                        |
+| `src/routes/services.tsx`      | Service descriptions.                                                                               |
+| `src/routes/testimonials.tsx`  | Featured project summaries and repository links.                                                    |
+| `src/routes/contact.tsx`       | Visible profile names and contact layout.                                                           |
+| `src/routes/faq.tsx`           | Questions and answers.                                                                              |
+| `src/content/linux-article.ts` | Full supplied article, title and description.                                                       |
+| `src/styles.css`               | Semantic design tokens, global styles and motion preferences.                                       |
 
 Read the current file before changing it. Keep shared values in their existing shared location rather than copying profile URLs or wallet addresses into multiple pages. Check address changes with the owner; public wallet addresses are not secret keys, but accuracy is essential.
 
@@ -257,16 +257,16 @@ In Lovable, builds run automatically after edits. Check the latest result rather
 
 ## Troubleshooting
 
-| Symptom | Check | Corrective action |
-| --- | --- | --- |
-| Missing path in route types. | Does the destination file exist with the correct name? | Create or rename the route and allow generation to run; do not cast away the error. |
-| Two pages claim `/`. | Is there an extra index under an unintended layout? | Keep `src/routes/index.tsx` as the root index and remove the conflicting claimant. |
-| Blog listing appears where the article should be. | Does the parent render `Outlet`, and is the article file correctly named? | Restore nesting and verify both direct URLs. |
-| Child content is blank. | Does its parent render `Outlet`? | Restore the outlet before debugging the child's content. |
-| Metadata is missing or duplicated. | Does the leaf content route define a unique `head()`? | Use the shared helper on the visible content route and inspect the resulting document head. |
-| A library fails during server rendering. | Does it access browser globals during import? | Move shared data out and dynamically load browser-only code after hydration. |
-| Phone layout overflows. | Are long words or fixed widths preventing wrapping? | Fix the affected constraints and retest the entire page. |
-| An old URL stops working after a rename. | Was a redirect implemented? | Restore compatibility if required and test both URL paths. |
+| Symptom                                           | Check                                                                     | Corrective action                                                                           |
+| ------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Missing path in route types.                      | Does the destination file exist with the correct name?                    | Create or rename the route and allow generation to run; do not cast away the error.         |
+| Two pages claim `/`.                              | Is there an extra index under an unintended layout?                       | Keep `src/routes/index.tsx` as the root index and remove the conflicting claimant.          |
+| Blog listing appears where the article should be. | Does the parent render `Outlet`, and is the article file correctly named? | Restore nesting and verify both direct URLs.                                                |
+| Child content is blank.                           | Does its parent render `Outlet`?                                          | Restore the outlet before debugging the child's content.                                    |
+| Metadata is missing or duplicated.                | Does the leaf content route define a unique `head()`?                     | Use the shared helper on the visible content route and inspect the resulting document head. |
+| A library fails during server rendering.          | Does it access browser globals during import?                             | Move shared data out and dynamically load browser-only code after hydration.                |
+| Phone layout overflows.                           | Are long words or fixed widths preventing wrapping?                       | Fix the affected constraints and retest the entire page.                                    |
+| An old URL stops working after a rename.          | Was a redirect implemented?                                               | Restore compatibility if required and test both URL paths.                                  |
 
 ## Maintenance Checklist
 
