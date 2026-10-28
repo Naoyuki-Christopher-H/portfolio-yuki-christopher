@@ -14,7 +14,6 @@ website and reviewers assessing the implementation.
 
 - [Overview](#overview)
 - [Pages and Visitor Experience](#pages-and-visitor-experience)
-- [Featured Projects](#featured-projects)
 - [Technology and Architecture](#technology-and-architecture)
 - [Repository Structure](#repository-structure)
 - [Local Development](#local-development)
@@ -31,7 +30,6 @@ website and reviewers assessing the implementation.
 - [Quality Assurance](#quality-assurance)
 - [Publishing and Release Checks](#publishing-and-release-checks)
 - [Security and Privacy](#security-and-privacy)
-- [Troubleshooting](#troubleshooting)
 - [Contribution Guidelines](#contribution-guidelines)
 - [Current Scope and Limitations](#current-scope-and-limitations)
 - [Ownership and Licensing](#ownership-and-licensing)
@@ -68,19 +66,6 @@ The Work page keeps `/testimonials` as its URL but currently
 displays projects rather than testimonial quotes. Unknown URLs
 show a custom page-not-found screen. Shared navigation and footer
 links are available across the site.
-
-## Featured Projects
-
-| Project                 | Summary                                                                                                                 | Source repository                                                                       |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Harmonie Budget Tracker | Offline Android expense tracking, categories, monthly budgets and spending charts; Kotlin, MVVM and local JSON storage. | [harmonie-budget-app-kt](https://github.com/HChristopherNaoyuki/harmonie-budget-app-kt) |
-| Campus Eats             | Android campus dining with local Room storage, Firebase synchronization, authentication and REST catalog integration.   | [campus-eats-app-kt](https://github.com/HChristopherNaoyuki/campus-eats-app-kt)         |
-| Fake Restaurant API     | A mock restaurant ordering API for learning, testing and integration; ASP.NET Core and Entity Framework Core.           | [fake-restaurant-api](https://github.com/HChristopherNaoyuki/fake-restaurant-api)       |
-
-These technologies describe the featured projects. They are not
-dependencies or services used by this portfolio. For application
-setup, API contracts and project-specific licenses, consult each
-linked repository.
 
 ## Technology and Architecture
 
@@ -372,27 +357,6 @@ and the chosen host's deployment instructions.
 
 Review the Privacy Policy and Terms with appropriate legal advice
 when site behavior, data collection or commercial activity changes.
-
-## Troubleshooting
-
-| Problem                                       | Likely cause                                                             | Recommended action                                                                                 |
-| --------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| Installation fails with a lockfile error.     | Manifest and lockfile differ.                                            | Restore matching files or intentionally update dependencies and review changes.                    |
-| A newly released dependency will not install. | Bun's release-age guard blocks it.                                       | Wait for the configured period; do not bypass the guard without an approved reason.                |
-| A page shows the not-found screen.            | Missing or incorrectly named route file.                                 | Check the route naming guide and let route generation run.                                         |
-| A route type refers to a missing path.        | A link was added before its destination route.                           | Create or correct the route file; do not suppress the error with a cast.                           |
-| Blog child pages do not appear.               | The parent no longer renders `Outlet`.                                   | Restore the parent route's `Outlet`.                                                               |
-| Long text clips on phones.                    | A constrained element cannot wrap.                                       | Check the affected page and shared layout; add appropriate wrapping and retest.                    |
-| Styling breaks after configuration changes.   | Duplicate plugins or invalid CSS imports.                                | Restore the shared Vite integration and keep CSS imports at the top of the stylesheet.             |
-| Wallet copying fails.                         | Clipboard restrictions or permission denial.                             | Test on HTTPS and confirm browser permissions; the visible address can still be selected manually. |
-| Published pages still show old content.       | Preview changes have not been published, or cached content is displayed. | Confirm publishing completed, then reload and inspect the public site.                             |
-| An unexpected error screen appears.           | Rendering or request processing failed.                                  | Inspect browser and hosting logs; do not expose stack traces to visitors.                          |
-
-In the Lovable sandbox, diagnostic files may be available under
-`/tmp/observability/`, including `build-errors.log` and
-`runtime-errors.log`. These are environment-specific and may not
-exist in a local checkout. Check for file presence before reading
-them.
 
 ## Contribution Guidelines
 
