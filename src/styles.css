@@ -1,129 +1,47 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
-
+@source "../src";
 @custom-variant dark (&:is(.dark *));
-
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
-
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-hover: var(--primary-hover);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-ring-offset-background: var(--background);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-rose: var(--rose);
-  --color-blush: var(--blush);
-  --color-cream: var(--cream);
-  --color-taupe: var(--taupe);
-  --color-espresso: var(--espresso);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-background: var(--background); --color-foreground: var(--foreground);
+  --color-card: var(--card); --color-card-foreground: var(--foreground);
+  --color-popover: var(--card); --color-popover-foreground: var(--foreground);
+  --color-primary: var(--primary); --color-primary-hover: var(--primary-hover); --color-primary-foreground: var(--foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--secondary); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--primary); --color-accent-foreground: var(--foreground);
+  --color-destructive: var(--primary); --color-destructive-foreground: var(--foreground);
+  --color-border: var(--border); --color-input: var(--border); --color-ring: var(--primary);
+  --color-rose: var(--primary); --color-blush: var(--border); --color-cream: var(--foreground);
+  --color-taupe: var(--muted-foreground); --color-espresso: var(--background);
+  --color-language-mobile: var(--language-mobile); --color-language-api: var(--language-api);
+  --radius-sm: 4px; --radius-md: 6px; --radius-lg: 8px; --radius-xl: 8px;
+  --font-sans: "Manrope", sans-serif; --font-display: "Barlow Condensed", sans-serif;
 }
-
-:root {
-  --radius: 1.25rem;
-  --rose: oklch(0.52 0.065 35);
-  --blush: oklch(0.945 0.018 35);
-  --cream: oklch(0.98 0.005 55);
-  --taupe: oklch(0.50 0.018 40);
-  --espresso: oklch(0.33 0.018 40);
-  --background: var(--cream);
-  --foreground: var(--espresso);
-  --card: oklch(0.99 0.003 55);
-  --card-foreground: var(--espresso);
-  --popover: var(--cream);
-  --popover-foreground: var(--espresso);
-  --primary: var(--espresso);
-  --primary-hover: oklch(0.40 0.035 35);
-  --primary-foreground: var(--cream);
-  --secondary: var(--blush);
-  --secondary-foreground: var(--espresso);
-  --muted: oklch(0.955 0.009 45);
-  --muted-foreground: var(--taupe);
-  --accent: var(--rose);
-  --accent-foreground: var(--cream);
-  --destructive: var(--rose);
-  --destructive-foreground: var(--cream);
-  --border: oklch(0.87 0.015 40 / 55%);
-  --input: var(--blush);
-  --ring: var(--rose);
-  --chart-1: var(--rose); --chart-2: var(--blush); --chart-3: var(--taupe); --chart-4: var(--espresso); --chart-5: var(--cream);
-  --sidebar: var(--cream); --sidebar-foreground: var(--espresso); --sidebar-primary: var(--espresso); --sidebar-primary-foreground: var(--cream);
-  --sidebar-accent: var(--blush); --sidebar-accent-foreground: var(--espresso); --sidebar-border: var(--blush); --sidebar-ring: var(--rose);
-  --gradient-hero: linear-gradient(180deg, var(--cream) 0%, var(--blush) 48%, var(--cream) 100%);
-  --gradient-text: linear-gradient(120deg, var(--espresso) 0%, var(--rose) 100%);
-  --shadow-card: 0 20px 40px -20px color-mix(in oklab, var(--espresso) 18%, transparent);
+:root, .dark {
+  --background: oklch(0 0 0); --foreground: oklch(1 0 0);
+  --primary: oklch(0.569 0.222 22.1); --primary-hover: oklch(0.63 0.215 22.1);
+  --card: oklch(0.145 0 0); --secondary: oklch(0.185 0 0);
+  --muted-foreground: oklch(0.70 0 0); --border: oklch(0.28 0 0);
+  --language-mobile: oklch(0.72 0.12 300); --language-api: oklch(0.76 0.15 145);
+  --shadow-card: 0 12px 32px color-mix(in oklab, var(--background) 50%, transparent);
+  --gradient-text: linear-gradient(110deg, var(--foreground), var(--muted-foreground));
 }
-
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: 0;
-  }
-  h1, h2, h3 { letter-spacing: 0; }
-  :focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+  * { border-color: var(--border); }
+  body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-sans); -webkit-font-smoothing:antialiased; letter-spacing:0; }
+  h1,h2,h3 { letter-spacing:0; } :focus-visible { outline:2px solid var(--primary); outline-offset:4px; }
+  ::selection { background:var(--primary); color:var(--foreground); }
 }
-
-@utility bg-hero { background-image: var(--gradient-hero); }
-@utility text-gradient { background-image: var(--gradient-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-@utility glass { background-color: color-mix(in oklab, var(--cream) 75%, transparent); backdrop-filter: saturate(180%) blur(20px); }
-@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
-@utility animate-rise { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
+@utility bg-hero { background-color:var(--background); }
+@utility glass { background-color:var(--card); }
+@utility text-gradient { color:var(--foreground); }
+@utility animate-rise { animation:rise .6s ease-out both; }
+@keyframes rise { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+.player-card { position:relative; width:100%; max-width:320px; aspect-ratio: .70; overflow:hidden; clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%); background:var(--card); border-top:3px solid var(--primary); }
+.player-card::after { content:""; position:absolute; inset:0; pointer-events:none; box-shadow:inset 0 0 0 1px var(--border); clip-path:inherit; }
+.player-image { position:absolute; inset:24px 0 auto; height:66%; width:100%; object-fit:cover; }
+.player-info { position:absolute; bottom:13%; left:22px; right:22px; background:var(--background); }
+.stat-line { height:3px; background:var(--border); }
+.stat-line::before { content:""; display:block; width:100%; height:100%; background:var(--primary); }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none !important; transition:none !important; } }
