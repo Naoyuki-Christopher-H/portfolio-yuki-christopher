@@ -1,71 +1,36 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Card, CTA, LINKS, meta, Pill, Section } from "@/components/site";
-
-export const Route = createFileRoute("/")({
-  head: () => meta("Software Engineer", "Portfolio of Naoyuki Christopher Higaki — software engineer building with Java, C#, Kotlin and ASP.NET Core."),
-  component: Index,
-});
-
-const STACK = ["Java", "C#", "JavaScript", "Kotlin", "PHP", "C++", "ASP.NET Core", "SQL Server"];
-
-function Index() {
-  return (
-    <>
-      <section className="bg-hero">
-        <div className="animate-rise mx-auto max-w-5xl px-6 pb-28 pt-28 text-center md:pt-40">
-          <p className="text-sm font-medium text-rose">Higaki, Naoyuki Christopher</p>
-          <h1 className="mt-4 text-4xl font-semibold leading-[1.12] sm:text-6xl md:text-8xl">
-            <span className="text-gradient">Software,</span>
-            <br />
-            <span className="text-foreground">thoughtfully engineered.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-foreground/70 md:text-xl">
-            Software Engineer crafting reliable desktop, web and Android applications.
-          </p>
-          <div className="mt-10 flex justify-center gap-2">
-            <CTA to="/contact">Get in touch</CTA>
-            <CTA to="/about" ghost>Learn more ›</CTA>
-          </div>
-        </div>
-      </section>
-
-      <Section>
-        <div className="flex flex-wrap justify-center gap-2">
-          {STACK.map((s) => <Pill key={s}>{s}</Pill>)}
-        </div>
-      </Section>
-
-      <Section className="pt-0">
-        <div className="grid gap-5 md:grid-cols-3">
-          {[
-            ["Web", "ASP.NET Core MVC, Razor and Entity Framework Core apps.", "/services"],
-            ["Desktop", "Native Windows experiences with WPF and XAML.", "/services"],
-            ["Mobile", "Android apps written in Kotlin and Java.", "/services"],
-          ].map(([t, d, to]) => (
-            <Link key={t} to={to as "/services"}>
-              <Card className="h-full">
-                <h3 className="text-2xl font-semibold">{t}</h3>
-                <p className="mt-3 text-foreground/70">{d}</p>
-                <p className="mt-6 text-sm text-rose">Explore ›</p>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-4xl px-6 py-24 text-center">
-          <h2 className="text-4xl font-semibold md:text-5xl">Open source, out in the open.</h2>
-          <p className="mt-4 text-primary-foreground/70">Browse projects across personal, academic and professional work.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
-            {[["Personal", LINKS.githubPersonal], ["Academic", LINKS.githubAcademic], ["Professional", LINKS.githubPro]].map(([l, h]) => (
-              <a key={l} href={h} target="_blank" rel="noreferrer" className="rounded-full border border-blush/40 px-5 py-2 hover:bg-rose">
-                {l} GitHub
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
+import { useState } from "react";
+import { ArrowUpRight, ArrowRight, Code2, Github, Terminal, Monitor, GitBranch, Layers, ChevronRight, Laptop } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { LINKS, meta, Pill } from "@/components/site";
+import { SKILL_GROUPS, PROJECTS } from "@/content/portfolio";
+import crest from "@/assets/player-crest.jpg";
+export const Route = createFileRoute("/")({head:()=>meta("Developer Profile", "Naoyuki Christopher Higaki's developer profile: software engineering skills, technology stack and three featured Android and ASP.NET Core projects."),component:Index});
+function Index(){
+ const [group,setGroup]=useState<keyof typeof SKILL_GROUPS>("Languages");
+ const [filter,setFilter]=useState("All");
+ return <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-12">
+  <div className="mb-8 flex items-center justify-between gap-4 border-b border-border pb-5"><p className="flex items-center gap-2 font-mono text-xs text-muted-foreground"><Terminal className="size-4 text-primary"/>README.md<span className="hidden sm:inline"> / developer profile</span></p><span className="rounded-full border border-border px-2.5 py-1 font-mono text-[10px] text-muted-foreground">PUBLIC PROFILE</span></div>
+  <div className="grid gap-10 lg:grid-cols-[290px_1fr] lg:gap-14">
+   <aside className="min-w-0">
+    <div className="player-card mx-auto animate-rise"><img src={crest} alt="Angular chrome developer crest with red highlights" className="player-image" width={768} height={1024}/><div className="absolute left-5 top-4 z-10"><p className="font-display text-5xl font-bold">DEV</p><p className="mt-1 font-mono text-[10px] text-muted-foreground">SOFTWARE ENGINEER</p></div><span className="absolute right-4 top-5 font-display text-sm text-primary">NCH / 01</span><div className="player-info pb-3 pt-4 text-center"><p className="font-display text-3xl font-semibold uppercase">Naoyuki</p><p className="mb-4 mt-1 font-mono text-[10px] text-muted-foreground">CHRISTOPHER HIGAKI</p><div className="grid grid-cols-3 border-t border-border pt-3">{[["6","LANG"],["3","PLAT"],["3","PROJ"]].map(([n,l])=><div key={l}><p className="font-display text-2xl font-semibold">{n}</p><p className="font-mono text-[9px] text-muted-foreground">{l}</p></div>)}</div></div></div>
+    <div className="mx-auto mt-6 max-w-80"><p className="text-lg font-semibold">Naoyuki Christopher Higaki</p><p className="mt-1 font-mono text-sm text-muted-foreground">@Naoyuki-Christopher-H</p><Button asChild variant="outline" className="mt-5 w-full"><a href={LINKS.githubPersonal} target="_blank" rel="noreferrer"><Github/>View GitHub profile<ArrowUpRight/></a></Button><div className="mt-5 space-y-3 border-b border-border pb-5 text-xs text-muted-foreground"><p className="flex items-center gap-2"><Code2 className="size-4"/>Web · Desktop · Android</p><p className="flex items-center gap-2"><Terminal className="size-4"/>Fedora Linux · macOS · Windows VMs</p><a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground"><ArrowUpRight className="size-4"/>Connect on LinkedIn</a></div><p className="mt-4 font-mono text-[10px] text-muted-foreground">INDEPENDENT DEVELOPER PROFILE<br/>NOT AFFILIATED WITH EA SPORTS</p></div>
+   </aside>
+   <div className="min-w-0">
+    <p className="mb-3 flex items-center gap-2 font-mono text-xs text-primary"><span className="size-1.5 bg-primary"/>THE DEVELOPER XI</p>
+    <h1 className="font-display text-5xl font-semibold uppercase leading-[1.02] sm:text-6xl">Naoyuki Christopher<br/><span className="text-primary">Higaki.</span></h1>
+    <p className="mt-4 text-lg font-medium">Software engineer. Built for the next challenge.</p>
+    <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">Clean code. Practical solutions. Reliable software.<br/>I build across web, desktop and Android — bringing thoughtful engineering to every project.</p>
+    <div className="mt-6 flex flex-wrap gap-3"><Button asChild><Link to="/contact">Let's connect<ArrowUpRight/></Link></Button><Button asChild variant="outline"><Link to="/testimonials">Explore projects<ArrowRight/></Link></Button></div>
+    <div className="mb-8 mt-9 grid grid-cols-3 divide-x divide-border border-y border-border py-5">{[["06","Languages",Code2],["03","Platforms",Monitor],["03","Featured projects",GitBranch]].map(([n,label,Icon])=>{ const I=Icon as typeof Code2;return <div key={String(label)} className="px-3 first:pl-0 sm:px-5"><I className="mb-2 size-4 text-muted-foreground"/><p className="font-display text-4xl font-semibold">{String(n)}<span className="text-primary">.</span></p><p className="mt-1 text-[10px] text-muted-foreground sm:text-xs">{String(label)}</p></div>})}</div>
+    <div className="mb-5 flex items-center justify-between"><h2 className="flex items-center gap-2 text-sm font-semibold"><Layers className="size-4 text-muted-foreground"/>Technical attributes</h2><Link to="/about" className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">Full skill set<ChevronRight className="size-3"/></Link></div>
+    <div role="tablist" aria-label="Skill categories" className="mb-5 flex flex-wrap gap-1 border-b border-border">{(Object.keys(SKILL_GROUPS) as (keyof typeof SKILL_GROUPS)[]).map(k=><Button key={k} role="tab" aria-selected={group===k} aria-controls="skill-panel" variant="ghost" size="sm" className={`rounded-none border-b-2 px-3 hover:bg-secondary ${group===k?"border-primary text-foreground":"border-transparent text-muted-foreground"}`} onClick={()=>setGroup(k)}>{k}</Button>)}</div>
+    <div id="skill-panel" role="tabpanel" aria-label={group} className="grid min-h-28 grid-cols-2 gap-x-7 gap-y-5 sm:grid-cols-3">{SKILL_GROUPS[group].map(s=><div key={s}><p className="mb-2 flex items-start justify-between gap-2 font-mono text-xs"><span>{s}</span><span className="text-primary">↗</span></p><div className="stat-line"/></div>)}</div>
+    <p className="mt-4 font-mono text-[10px] text-muted-foreground">STACK OVERVIEW · COUNTS REFLECT LISTED SKILLS, NOT PROFICIENCY RATINGS</p>
+   </div>
+  </div>
+  <section className="mt-14 border-t border-border pt-8"><div className="mb-6 flex flex-wrap items-center justify-between gap-4"><h2 className="flex items-center gap-2 text-base font-semibold"><GitBranch className="size-4 text-primary"/>Pinned projects<span className="ml-1 rounded-full bg-secondary px-2 py-0.5 text-xs text-muted-foreground">3</span></h2><div className="flex gap-1" aria-label="Project filters">{["All","Android","Web API"].map(f=><Button key={f} variant={filter===f?"secondary":"ghost"} size="sm" aria-pressed={filter===f} onClick={()=>setFilter(f)}>{f}</Button>)}</div></div>
+  <div className="grid gap-4 md:grid-cols-3">{PROJECTS.filter(p=>filter==="All"||p.category===filter).map((p,i)=><article key={p.name} className="flex min-h-64 flex-col rounded-lg border border-border bg-card p-5"><div className="flex items-center justify-between"><Code2 className="size-4 text-muted-foreground"/><span className="font-mono text-[10px] text-muted-foreground">PROJECT / 0{i+1}</span></div><h3 className="mt-5 text-sm font-semibold"><a href={p.url} target="_blank" rel="noreferrer" className="flex items-start justify-between gap-2 hover:underline">{p.name}<ArrowUpRight className="size-4 shrink-0 text-muted-foreground"/></a></h3><p className="mb-5 mt-3 text-xs leading-6 text-muted-foreground">{p.description}</p><div className="mt-auto flex flex-wrap gap-1.5">{p.tags.map(t=><Pill key={t}>{t}</Pill>)}</div><p className="mt-5 flex items-center gap-2 border-t border-border pt-3 text-[11px] text-muted-foreground"><span className={`size-2 rounded-full ${p.language==="Kotlin"?"bg-language-mobile":"bg-language-api"}`}/>{p.language}<span className="ml-auto">{p.category}</span></p></article>)}</div></section>
+  <section className="mt-9 flex flex-wrap items-center justify-between gap-5 border-y border-border py-6"><div className="flex items-center gap-4"><Laptop className="size-6 text-primary"/><div><h2 className="text-sm font-semibold">One engineer. Three environments.</h2><p className="mt-1 text-xs text-muted-foreground">Fedora Linux primary · macOS secondary · Windows for compatibility</p></div></div><Link to="/about" className="flex items-center gap-2 text-xs hover:text-primary">More about me<ArrowRight className="size-4"/></Link></section>
+ </div>;
 }
