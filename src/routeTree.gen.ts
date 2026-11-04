@@ -11,9 +11,20 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ChildSafetyRouteImport } from './routes/child-safety'
+import { Route as CommunityGuidelinesRouteImport } from './routes/community-guidelines'
+import { Route as ComplaintsAndAppealsRouteImport } from './routes/complaints-and-appeals'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ContentModerationRouteImport } from './routes/content-moderation'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as CopyrightRouteImport } from './routes/copyright'
+import { Route as DataRightsRouteImport } from './routes/data-rights'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as LegalNoticesRouteImport } from './routes/legal-notices'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ReportAbuseRouteImport } from './routes/report-abuse'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
@@ -28,9 +39,49 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ChildSafetyRoute = ChildSafetyRouteImport.update({
+  id: '/child-safety',
+  path: '/child-safety',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityGuidelinesRoute = CommunityGuidelinesRouteImport.update({
+  id: '/community-guidelines',
+  path: '/community-guidelines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComplaintsAndAppealsRoute = ComplaintsAndAppealsRouteImport.update({
+  id: '/complaints-and-appeals',
+  path: '/complaints-and-appeals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContentModerationRoute = ContentModerationRouteImport.update({
+  id: '/content-moderation',
+  path: '/content-moderation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CopyrightRoute = CopyrightRouteImport.update({
+  id: '/copyright',
+  path: '/copyright',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataRightsRoute = DataRightsRouteImport.update({
+  id: '/data-rights',
+  path: '/data-rights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -38,9 +89,24 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalNoticesRoute = LegalNoticesRouteImport.update({
+  id: '/legal-notices',
+  path: '/legal-notices',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportAbuseRoute = ReportAbuseRouteImport.update({
+  id: '/report-abuse',
+  path: '/report-abuse',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -62,9 +128,20 @@ const TestimonialsRoute = TestimonialsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/child-safety': typeof ChildSafetyRoute
+  '/community-guidelines': typeof CommunityGuidelinesRoute
+  '/complaints-and-appeals': typeof ComplaintsAndAppealsRoute
   '/contact': typeof ContactRoute
+  '/content-moderation': typeof ContentModerationRoute
+  '/cookies': typeof CookiesRoute
+  '/copyright': typeof CopyrightRoute
+  '/data-rights': typeof DataRightsRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/faq': typeof FaqRoute
+  '/legal': typeof LegalRoute
+  '/legal-notices': typeof LegalNoticesRoute
   '/privacy': typeof PrivacyRoute
+  '/report-abuse': typeof ReportAbuseRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
@@ -72,9 +149,20 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/child-safety': typeof ChildSafetyRoute
+  '/community-guidelines': typeof CommunityGuidelinesRoute
+  '/complaints-and-appeals': typeof ComplaintsAndAppealsRoute
   '/contact': typeof ContactRoute
+  '/content-moderation': typeof ContentModerationRoute
+  '/cookies': typeof CookiesRoute
+  '/copyright': typeof CopyrightRoute
+  '/data-rights': typeof DataRightsRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/faq': typeof FaqRoute
+  '/legal': typeof LegalRoute
+  '/legal-notices': typeof LegalNoticesRoute
   '/privacy': typeof PrivacyRoute
+  '/report-abuse': typeof ReportAbuseRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
@@ -83,9 +171,20 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/child-safety': typeof ChildSafetyRoute
+  '/community-guidelines': typeof CommunityGuidelinesRoute
+  '/complaints-and-appeals': typeof ComplaintsAndAppealsRoute
   '/contact': typeof ContactRoute
+  '/content-moderation': typeof ContentModerationRoute
+  '/cookies': typeof CookiesRoute
+  '/copyright': typeof CopyrightRoute
+  '/data-rights': typeof DataRightsRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/faq': typeof FaqRoute
+  '/legal': typeof LegalRoute
+  '/legal-notices': typeof LegalNoticesRoute
   '/privacy': typeof PrivacyRoute
+  '/report-abuse': typeof ReportAbuseRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
@@ -95,9 +194,20 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/child-safety'
+    | '/community-guidelines'
+    | '/complaints-and-appeals'
     | '/contact'
+    | '/content-moderation'
+    | '/cookies'
+    | '/copyright'
+    | '/data-rights'
+    | '/disclaimer'
     | '/faq'
+    | '/legal'
+    | '/legal-notices'
     | '/privacy'
+    | '/report-abuse'
     | '/services'
     | '/terms'
     | '/testimonials'
@@ -105,9 +215,20 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/child-safety'
+    | '/community-guidelines'
+    | '/complaints-and-appeals'
     | '/contact'
+    | '/content-moderation'
+    | '/cookies'
+    | '/copyright'
+    | '/data-rights'
+    | '/disclaimer'
     | '/faq'
+    | '/legal'
+    | '/legal-notices'
     | '/privacy'
+    | '/report-abuse'
     | '/services'
     | '/terms'
     | '/testimonials'
@@ -115,9 +236,20 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/child-safety'
+    | '/community-guidelines'
+    | '/complaints-and-appeals'
     | '/contact'
+    | '/content-moderation'
+    | '/cookies'
+    | '/copyright'
+    | '/data-rights'
+    | '/disclaimer'
     | '/faq'
+    | '/legal'
+    | '/legal-notices'
     | '/privacy'
+    | '/report-abuse'
     | '/services'
     | '/terms'
     | '/testimonials'
@@ -126,9 +258,20 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ChildSafetyRoute: typeof ChildSafetyRoute
+  CommunityGuidelinesRoute: typeof CommunityGuidelinesRoute
+  ComplaintsAndAppealsRoute: typeof ComplaintsAndAppealsRoute
   ContactRoute: typeof ContactRoute
+  ContentModerationRoute: typeof ContentModerationRoute
+  CookiesRoute: typeof CookiesRoute
+  CopyrightRoute: typeof CopyrightRoute
+  DataRightsRoute: typeof DataRightsRoute
+  DisclaimerRoute: typeof DisclaimerRoute
   FaqRoute: typeof FaqRoute
+  LegalRoute: typeof LegalRoute
+  LegalNoticesRoute: typeof LegalNoticesRoute
   PrivacyRoute: typeof PrivacyRoute
+  ReportAbuseRoute: typeof ReportAbuseRoute
   ServicesRoute: typeof ServicesRoute
   TermsRoute: typeof TermsRoute
   TestimonialsRoute: typeof TestimonialsRoute
@@ -150,11 +293,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/child-safety': {
+      id: '/child-safety'
+      path: '/child-safety'
+      fullPath: '/child-safety'
+      preLoaderRoute: typeof ChildSafetyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community-guidelines': {
+      id: '/community-guidelines'
+      path: '/community-guidelines'
+      fullPath: '/community-guidelines'
+      preLoaderRoute: typeof CommunityGuidelinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/complaints-and-appeals': {
+      id: '/complaints-and-appeals'
+      path: '/complaints-and-appeals'
+      fullPath: '/complaints-and-appeals'
+      preLoaderRoute: typeof ComplaintsAndAppealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/content-moderation': {
+      id: '/content-moderation'
+      path: '/content-moderation'
+      fullPath: '/content-moderation'
+      preLoaderRoute: typeof ContentModerationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/copyright': {
+      id: '/copyright'
+      path: '/copyright'
+      fullPath: '/copyright'
+      preLoaderRoute: typeof CopyrightRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data-rights': {
+      id: '/data-rights'
+      path: '/data-rights'
+      fullPath: '/data-rights'
+      preLoaderRoute: typeof DataRightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -164,11 +363,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal-notices': {
+      id: '/legal-notices'
+      path: '/legal-notices'
+      fullPath: '/legal-notices'
+      preLoaderRoute: typeof LegalNoticesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/report-abuse': {
+      id: '/report-abuse'
+      path: '/report-abuse'
+      fullPath: '/report-abuse'
+      preLoaderRoute: typeof ReportAbuseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -198,9 +418,20 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ChildSafetyRoute: ChildSafetyRoute,
+  CommunityGuidelinesRoute: CommunityGuidelinesRoute,
+  ComplaintsAndAppealsRoute: ComplaintsAndAppealsRoute,
   ContactRoute: ContactRoute,
+  ContentModerationRoute: ContentModerationRoute,
+  CookiesRoute: CookiesRoute,
+  CopyrightRoute: CopyrightRoute,
+  DataRightsRoute: DataRightsRoute,
+  DisclaimerRoute: DisclaimerRoute,
   FaqRoute: FaqRoute,
+  LegalRoute: LegalRoute,
+  LegalNoticesRoute: LegalNoticesRoute,
   PrivacyRoute: PrivacyRoute,
+  ReportAbuseRoute: ReportAbuseRoute,
   ServicesRoute: ServicesRoute,
   TermsRoute: TermsRoute,
   TestimonialsRoute: TestimonialsRoute,
