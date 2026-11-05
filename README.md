@@ -1,8 +1,8 @@
 # Naoyuki Christopher Higaki Portfolio
 
 A personal portfolio website presenting software engineering
-services, selected projects, professional profiles and one
-technical article about the author's computing setup.
+services, selected projects, professional profiles and legal policies.
+The overview combines a player-card profile with a developer-focused interface.
 
 **Public website:**
 [portfolio-yuki-christopher.lovable.app](https://portfolio-yuki-christopher.lovable.app)
@@ -24,7 +24,7 @@ website and reviewers assessing the implementation.
 - [Maintaining Content](#maintaining-content)
   - [Profile and Contact Details](#profile-and-contact-details)
   - [Projects and Services](#projects-and-services)
-  - [Blog Article](#blog-article)
+  - [Skills and Legal Policies](#skills-and-legal-policies)
   - [Design and Accessibility](#design-and-accessibility)
 - [Search and Social Previews](#search-and-social-previews)
 - [Quality Assurance](#quality-assurance)
@@ -41,7 +41,7 @@ website and reviewers assessing the implementation.
 The website gives visitors a concise view of Naoyuki Christopher
 Higaki's work across web, Windows desktop, Android and database
 development. Visitors can review skills, open project repositories,
-read the blog and connect through external professional profiles.
+filter featured projects and connect through external professional profiles.
 
 Content is maintained in the source code. The current
 implementation does not use a content management system,
@@ -55,11 +55,10 @@ application database or account system.
 | About          | `/about`                        | Background, skills, development tools and operating-system preferences.       |
 | Services       | `/services`                     | Web, desktop, Android, database, systems and code-review services.            |
 | Work           | `/testimonials`                 | The three featured projects with links to their source repositories.          |
-| Blog           | `/blog`                         | The current article listing.                                                  |
-| Article        | `/blog/linux-macos-windows-vms` | The full Fedora, macOS and Windows virtual-machine article.                   |
 | FAQ            | `/faq`                          | Common questions in expandable sections.                                      |
 | Contact        | `/contact`                      | LinkedIn, GitHub and LeetCode profiles, plus public wallet addresses.         |
 | Privacy Policy | `/privacy`                      | Information about data handling and external services.                        |
+| Legal directory | `/legal` | Twelve legal and safety policies. |
 | Terms          | `/terms`                        | Conditions for using the portfolio.                                           |
 
 The Work page keeps `/testimonials` as its URL but currently
@@ -85,8 +84,7 @@ links are available across the site.
 `src/router.tsx` creates the router and query client.
 `src/routes/__root.tsx` provides the document shell, shared layout,
 query provider and error screens. Individual content routes supply
-their own page metadata. The nested blog parent renders its child
-pages through an `Outlet`.
+their own page metadata. The root renders pages through an `Outlet`.
 
 `src/start.ts` includes request error handling and cross-site
 request protection for server functions. `src/server.ts` wraps the
@@ -117,7 +115,7 @@ checked for target-runtime compatibility.
 └── src/
     ├── components/site.tsx   Shared layout, metadata and portfolio elements
     ├── components/ui/        Reusable UI components
-    ├── content/              Structured blog article content
+    ├── content/              Shared skill, project and legal policy content
     ├── hooks/                Shared React hooks
     ├── lib/                  Utilities and error handling
     ├── routes/               File-based pages and route documentation
@@ -236,21 +234,26 @@ Services are defined in `src/routes/services.tsx`. Keep the home-page
 summaries and About-page skills consistent with changes to service
 offerings.
 
-### Blog Article
+### Skills and Legal Policies
 
-The article text is in `src/content/linux-article.ts`. Its `ARTICLE`
-export contains a title, a description and ordered content blocks.
-The article page renders those blocks as paragraphs, headings, lists
-and emphasized text without a runtime Markdown dependency.
+`src/content/portfolio.ts` stores overview skills and pinned project data.
+The overview shows counts of listed languages, platforms and projects,
+not invented proficiency scores, years of experience or live GitHub metrics.
+Skill-category tabs and project filters operate locally without saving data.
 
-The listing is in `src/routes/blog.index.tsx`. The complete article
-is in `src/routes/blog.linux-macos-windows-vms.tsx`.
-`src/routes/blog.tsx` is the parent route and must retain its
-`Outlet`.
+`src/content/legal.ts` stores twelve policies. Each policy has its own route
+and metadata and uses `src/components/policy-page.tsx` for a linked contents
+list and consistent presentation. `/legal` provides the policy directory.
 
-The blog currently contains only the owner's supplied article. Do
-not add placeholder posts. Preserve the meaning and ordering of the
-author's text when correcting or updating it.
+The policy URLs are `/privacy`, `/terms`, `/community-guidelines`, `/cookies`,
+`/content-moderation`, `/report-abuse`, `/complaints-and-appeals`, `/copyright`,
+`/disclaimer`, `/legal-notices`, `/data-rights` and `/child-safety`.
+They describe a public portfolio, not an account or social-content platform.
+Hosting retention, processing locations, jurisdiction and any required
+business disclosures still need operator verification and legal review.
+
+The blog has been removed at the owner's request. Its former URLs return
+page-not-found; do not add links to them or restore article routes.
 
 ### Design and Accessibility
 
@@ -269,7 +272,7 @@ establish accessibility compliance.
 Every content page supplies a unique title and description through
 the shared `meta` helper in `src/components/site.tsx`. The helper
 also sets Open Graph title, description and type, plus the Twitter
-card type. The article overrides its Open Graph type to `article`.
+card type. All current content routes use the website type.
 
 `public/robots.txt` allows crawling and points to
 `public/sitemap.xml`. The sitemap lists public content URLs on the
@@ -298,8 +301,7 @@ repository or publishing outcome.
 For a release or content update, also check:
 
 1. Open every public URL directly and through navigation.
-2. Confirm that the blog listing opens the article and that its
-   return link works.
+2. Check skill tabs, project filters and the twelve policy links.
 3. Check project and contact link destinations.
 4. Test FAQ expansion and wallet copying in a supported browser.
 5. Inspect narrow phone and desktop layouts for clipping and
@@ -325,7 +327,7 @@ updated. Publish intentionally after reviewing the preview.
 Before publishing, complete the quality checks above and confirm
 that links, addresses and legal wording are approved. After
 publishing, repeat the essential checks on the public domain,
-including direct loading of the article URL and sitemap access.
+including direct loading of the legal policy URLs and sitemap access.
 
 For an independent hosting deployment, preserve the configured
 TanStack Start server build and use a host compatible with its
@@ -383,12 +385,12 @@ unrelated changes in a contribution.
 
 The website is a source-maintained portfolio. It is not a customer
 portal, online shop, hosted restaurant API or Android application.
-It does not provide project search, blog subscriptions, comments,
+It does not provide full-text project search, subscriptions, comments,
 user accounts or automatic synchronization with GitHub
 repositories.
 
 Featured project descriptions are owner-provided summaries. The
-blog has one article. Wallet support is an address display and copy
+overview provides local category filtering. Wallet support is an address display and copy
 feature, not transaction tracking. The legal pages are general site
 wording rather than evidence of legal review.
 
