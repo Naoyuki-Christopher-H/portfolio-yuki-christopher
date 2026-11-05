@@ -38,17 +38,17 @@ Keep the existing routing framework. Do not add React Router, `BrowserRouter`, a
 
 Paths below are relative to this directory.
 
-| File                               | Public URL                      | Responsibility                                                                   |
-| ---------------------------------- | ------------------------------- | -------------------------------------------------------------------------------- |
-| `__root.tsx`                       | All pages                       | Document shell, shared navigation and footer, query provider and error screens.  |
-| `index.tsx`                        | `/`                             | Portfolio introduction and overview.                                             |
-| `about.tsx`                        | `/about`                        | Background, skills, tools and operating-system preferences.                      |
-| `services.tsx`                     | `/services`                     | Development services.                                                            |
-| `testimonials.tsx`                 | `/testimonials`                 | Three featured projects and external repository links; navigation label is Projects. |
-| `faq.tsx`                          | `/faq`                          | Expandable questions and answers.                                                |
-| `contact.tsx`                      | `/contact`                      | External profiles and support wallet addresses.                                  |
-| `privacy.tsx`                      | `/privacy`                      | Privacy information.                                                             |
-| `terms.tsx`                        | `/terms`                        | Website terms.                                                                   |
+| File               | Public URL      | Responsibility                                                                       |
+| ------------------ | --------------- | ------------------------------------------------------------------------------------ |
+| `__root.tsx`       | All pages       | Document shell, shared navigation and footer, query provider and error screens.      |
+| `index.tsx`        | `/`             | Portfolio introduction and overview.                                                 |
+| `about.tsx`        | `/about`        | Background, skills, tools and operating-system preferences.                          |
+| `services.tsx`     | `/services`     | Development services.                                                                |
+| `testimonials.tsx` | `/testimonials` | Three featured projects and external repository links; navigation label is Projects. |
+| `faq.tsx`          | `/faq`          | Expandable questions and answers.                                                    |
+| `contact.tsx`      | `/contact`      | External profiles and support wallet addresses.                                      |
+| `privacy.tsx`      | `/privacy`      | Privacy information.                                                                 |
+| `terms.tsx`        | `/terms`        | Website terms.                                                                       |
 
 The blog has been removed. Its former URLs are not content routes. `/legal` links to twelve individual policy routes.
 
@@ -93,19 +93,19 @@ contents, numbered section anchors and an external operator-contact link.
 Each policy route selects its content and supplies unique `head()` metadata.
 The directory at `/legal` links to each independent page.
 
-| File | URL |
-| --- | --- |
-| `legal.tsx` | `/legal` |
-| `community-guidelines.tsx` | `/community-guidelines` |
-| `cookies.tsx` | `/cookies` |
-| `content-moderation.tsx` | `/content-moderation` |
-| `report-abuse.tsx` | `/report-abuse` |
+| File                         | URL                       |
+| ---------------------------- | ------------------------- |
+| `legal.tsx`                  | `/legal`                  |
+| `community-guidelines.tsx`   | `/community-guidelines`   |
+| `cookies.tsx`                | `/cookies`                |
+| `content-moderation.tsx`     | `/content-moderation`     |
+| `report-abuse.tsx`           | `/report-abuse`           |
 | `complaints-and-appeals.tsx` | `/complaints-and-appeals` |
-| `copyright.tsx` | `/copyright` |
-| `disclaimer.tsx` | `/disclaimer` |
-| `legal-notices.tsx` | `/legal-notices` |
-| `data-rights.tsx` | `/data-rights` |
-| `child-safety.tsx` | `/child-safety` |
+| `copyright.tsx`              | `/copyright`              |
+| `disclaimer.tsx`             | `/disclaimer`             |
+| `legal-notices.tsx`          | `/legal-notices`          |
+| `data-rights.tsx`            | `/data-rights`            |
+| `child-safety.tsx`           | `/child-safety`           |
 
 Privacy and Terms are listed in the main inventory. Keep policy scope aligned
 with actual functionality: no visitor accounts, uploads or on-site messaging.
@@ -188,19 +188,19 @@ Canonical tags are not currently implemented. If adding them, use the approved p
 
 ## Content and Shared Components
 
-| Source                         | Content or behavior maintained there                                                                |
-| ------------------------------ | --------------------------------------------------------------------------------------------------- |
-| `src/components/site.tsx`      | Shared navigation, footer, metadata, profile URLs, wallet addresses and portfolio display elements. |
-| `src/components/ui/`           | Reusable controls and interface primitives.                                                         |
-| `src/routes/index.tsx`         | Home-page technology stack and introductory sections.                                               |
-| `src/routes/about.tsx`         | Skill and background groups.                                                                        |
-| `src/routes/services.tsx`      | Service descriptions.                                                                               |
-| `src/routes/testimonials.tsx`  | Featured project summaries and repository links.                                                    |
-| `src/routes/contact.tsx`       | Visible profile names and contact layout.                                                           |
-| `src/routes/faq.tsx`           | Questions and answers.                                                                              |
-| `src/content/portfolio.ts` | Overview skills and pinned project data. |
-| `src/content/legal.ts` | Structured legal policies. |
-| `src/styles.css`               | Semantic design tokens, global styles and motion preferences.                                       |
+| Source                        | Content or behavior maintained there                                                                |
+| ----------------------------- | --------------------------------------------------------------------------------------------------- |
+| `src/components/site.tsx`     | Shared navigation, footer, metadata, profile URLs, wallet addresses and portfolio display elements. |
+| `src/components/ui/`          | Reusable controls and interface primitives.                                                         |
+| `src/routes/index.tsx`        | Home-page technology stack and introductory sections.                                               |
+| `src/routes/about.tsx`        | Skill and background groups.                                                                        |
+| `src/routes/services.tsx`     | Service descriptions.                                                                               |
+| `src/routes/testimonials.tsx` | Featured project summaries and repository links.                                                    |
+| `src/routes/contact.tsx`      | Visible profile names and contact layout.                                                           |
+| `src/routes/faq.tsx`          | Questions and answers.                                                                              |
+| `src/content/portfolio.ts`    | Overview skills and pinned project data.                                                            |
+| `src/content/legal.ts`        | Structured legal policies.                                                                          |
+| `src/styles.css`              | Semantic design tokens, global styles and motion preferences.                                       |
 
 Read the current file before changing it. Keep shared values in their existing shared location rather than copying profile URLs or wallet addresses into multiple pages. Check address changes with the owner; public wallet addresses are not secret keys, but accuracy is essential.
 
@@ -261,15 +261,15 @@ In Lovable, builds run automatically after edits. Check the latest result rather
 
 ## Troubleshooting
 
-| Symptom                                           | Check                                                                     | Corrective action                                                                           |
-| ------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Missing path in route types.                      | Does the destination file exist with the correct name?                    | Create or rename the route and allow generation to run; do not cast away the error.         |
-| Two pages claim `/`.                              | Is there an extra index under an unintended layout?                       | Keep `src/routes/index.tsx` as the root index and remove the conflicting claimant.          |
-| Child content is blank.                           | Does its parent render `Outlet`?                                          | Restore the outlet before debugging the child's content.                                    |
-| Metadata is missing or duplicated.                | Does the leaf content route define a unique `head()`?                     | Use the shared helper on the visible content route and inspect the resulting document head. |
-| A library fails during server rendering.          | Does it access browser globals during import?                             | Move shared data out and dynamically load browser-only code after hydration.                |
-| Phone layout overflows.                           | Are long words or fixed widths preventing wrapping?                       | Fix the affected constraints and retest the entire page.                                    |
-| An old URL stops working after a rename.          | Was a redirect implemented?                                               | Restore compatibility if required and test both URL paths.                                  |
+| Symptom                                  | Check                                                  | Corrective action                                                                           |
+| ---------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| Missing path in route types.             | Does the destination file exist with the correct name? | Create or rename the route and allow generation to run; do not cast away the error.         |
+| Two pages claim `/`.                     | Is there an extra index under an unintended layout?    | Keep `src/routes/index.tsx` as the root index and remove the conflicting claimant.          |
+| Child content is blank.                  | Does its parent render `Outlet`?                       | Restore the outlet before debugging the child's content.                                    |
+| Metadata is missing or duplicated.       | Does the leaf content route define a unique `head()`?  | Use the shared helper on the visible content route and inspect the resulting document head. |
+| A library fails during server rendering. | Does it access browser globals during import?          | Move shared data out and dynamically load browser-only code after hydration.                |
+| Phone layout overflows.                  | Are long words or fixed widths preventing wrapping?    | Fix the affected constraints and retest the entire page.                                    |
+| An old URL stops working after a rename. | Was a redirect implemented?                            | Restore compatibility if required and test both URL paths.                                  |
 
 ## Maintenance Checklist
 

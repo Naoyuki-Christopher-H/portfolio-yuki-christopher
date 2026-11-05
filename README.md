@@ -49,17 +49,17 @@ application database or account system.
 
 ## Pages and Visitor Experience
 
-| Page           | URL path                        | Purpose                                                                       |
-| -------------- | ------------------------------- | ----------------------------------------------------------------------------- |
-| Home           | `/`                             | Introduction, technology stack and links to services and profiles.            |
-| About          | `/about`                        | Background, skills, development tools and operating-system preferences.       |
-| Services       | `/services`                     | Web, desktop, Android, database, systems and code-review services.            |
-| Work           | `/testimonials`                 | The three featured projects with links to their source repositories.          |
-| FAQ            | `/faq`                          | Common questions in expandable sections.                                      |
-| Contact        | `/contact`                      | LinkedIn, GitHub and LeetCode profiles, plus public wallet addresses.         |
-| Privacy Policy | `/privacy`                      | Information about data handling and external services.                        |
-| Legal directory | `/legal` | Twelve legal and safety policies. |
-| Terms          | `/terms`                        | Conditions for using the portfolio.                                           |
+| Page            | URL path        | Purpose                                                                 |
+| --------------- | --------------- | ----------------------------------------------------------------------- |
+| Home            | `/`             | Introduction, technology stack and links to services and profiles.      |
+| About           | `/about`        | Background, skills, development tools and operating-system preferences. |
+| Services        | `/services`     | Web, desktop, Android, database, systems and code-review services.      |
+| Work            | `/testimonials` | The three featured projects with links to their source repositories.    |
+| FAQ             | `/faq`          | Common questions in expandable sections.                                |
+| Contact         | `/contact`      | LinkedIn, GitHub and LeetCode profiles, plus public wallet addresses.   |
+| Privacy Policy  | `/privacy`      | Information about data handling and external services.                  |
+| Legal directory | `/legal`        | Twelve legal and safety policies.                                       |
+| Terms           | `/terms`        | Conditions for using the portfolio.                                     |
 
 The Work page keeps `/testimonials` as its URL but currently
 displays projects rather than testimonial quotes. Unknown URLs
@@ -410,7 +410,6 @@ featured repositories have independent licensing terms; check each
 repository before using its code or media.
 
 ## Disclaimer
-
 
 ```
 UNDER NO CIRCUMSTANCES SHOULD IMAGES OR EMOJIS BE INCLUDED DIRECTLY IN

@@ -2,7 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Card, LINKS, meta, PageHero, Section, Wallet, WALLETS } from "@/components/site";
 
 export const Route = createFileRoute("/contact")({
-  head: () => meta("Contact", "Connect with Naoyuki Christopher Higaki on LinkedIn, GitHub and LeetCode, or support via crypto."),
+  head: () =>
+    meta(
+      "Contact",
+      "Connect with Naoyuki Christopher Higaki on LinkedIn, GitHub and LeetCode, or support via crypto.",
+    ),
   component: Contact,
 });
 
@@ -34,7 +38,9 @@ function Contact() {
         </div>
         <h2 className="mt-24 text-center text-3xl font-semibold">Support my work</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {Object.entries(WALLETS).map(([n, a]) => <Wallet key={n} name={n} address={a} />)}
+          {Object.entries(WALLETS).map(([n, a]) => (
+            <Wallet key={n} name={n} address={a} />
+          ))}
         </div>
       </Section>
     </>
