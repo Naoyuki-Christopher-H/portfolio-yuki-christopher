@@ -1,48 +1,13 @@
 export const SKILL_GROUPS = {
   Languages: ["Java", "C#", "JavaScript", "Kotlin", "PHP", "C++"],
-  Frameworks: ["ASP.NET Core MVC", "Entity Framework Core", "WPF", "XAML", "Android"],
-  Databases: ["Microsoft SQL Server", "MySQL", "Oracle SQL"],
-  Tools: [
-    "Git",
-    "GitHub",
-    "Visual Studio",
-    "Visual Studio Code",
-    "Android Studio",
-    "Oracle SQL Developer",
-  ],
+  Frameworks: ["Web architecture", "Data mapping", "Desktop interfaces", "Declarative UI", "Mobile applications"],
+  Databases: ["Relational design", "SQL queries", "Stored procedures"],
+  Tools: ["Version control", "Code review", "Development environments", "Code editing", "Mobile tooling", "Database tooling"],
 };
 export const PROJECTS = [
-  {
-    name: "Harmonie Budget Tracker",
-    description:
-      "Offline Android expense tracking. Custom categories, monthly budgets and spending insights — without the cloud.",
-    language: "Kotlin",
-    category: "Android",
-    tags: ["MVVM", "Gson", "Offline-first"],
-    url: "https://github.com/HChristopherNaoyuki/harmonie-budget-app-kt",
-  },
-  {
-    name: "Campus Eats",
-    description:
-      "A smarter campus dining experience. Local Room storage meets Firebase synchronization and REST integration.",
-    language: "Kotlin",
-    category: "Android",
-    tags: ["Room", "Firebase", "REST"],
-    url: "https://github.com/HChristopherNaoyuki/campus-eats-app-kt",
-  },
-  {
-    name: "Fake Restaurant API",
-    description:
-      "A mock restaurant ordering API for testing and learning, built with documented endpoints and practical data models.",
-    language: "C#",
-    category: "Web API",
-    tags: ["ASP.NET Core", "EF Core", "REST"],
-    url: "https://github.com/HChristopherNaoyuki/fake-restaurant-api",
-  },
+  {name:"Offline Expense Tracker",description:"Daily expense tracking with custom categories, monthly budgets and spending insights. Local storage keeps the essentials available offline.",language:"Kotlin",category:"Mobile",tags:["MVVM","Local storage","Offline-first"],url:"https://github.com/HChristopherNaoyuki/harmonie-budget-app-kt"},
+  {name:"Campus Dining Application",description:"A campus dining workflow combining local persistence, remote synchronization and service integration.",language:"Kotlin",category:"Mobile",tags:["Local database","Synchronization","REST"],url:"https://github.com/HChristopherNaoyuki/campus-eats-app-kt"},
+  {name:"Restaurant Ordering API",description:"A mock ordering service for testing and learning, with documented endpoints and practical data models.",language:"C#",category:"Web API",tags:["Data mapping","Documentation","REST"],url:"https://github.com/HChristopherNaoyuki/fake-restaurant-api"},
 ];
-export const PLATFORMS = ["Web", "Desktop", "Android"];
-export const PROFILE_STATS = {
-  languages: SKILL_GROUPS.Languages.length,
-  platforms: PLATFORMS.length,
-  projects: PROJECTS.length,
-};
+export const PLATFORMS = ["Web", "Desktop", "Mobile"];
+export const PROFILE_STATS = { languages:SKILL_GROUPS.Languages.length, platforms:PLATFORMS.length, projects:PROJECTS.length };

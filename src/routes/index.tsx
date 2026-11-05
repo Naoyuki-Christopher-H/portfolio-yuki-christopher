@@ -4,7 +4,7 @@ import {
   ArrowUpRight,
   ArrowRight,
   Code2,
-  Github,
+  UserRound,
   Terminal,
   Monitor,
   GitBranch,
@@ -15,12 +15,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { LINKS, meta, Pill } from "@/components/site";
 import { SKILL_GROUPS, PROJECTS, PROFILE_STATS } from "@/content/portfolio";
-import crest from "@/assets/player-crest.jpg";
+import portrait from "@/assets/profile-enhanced.jpg";
 export const Route = createFileRoute("/")({
   head: () =>
     meta(
       "Developer Profile",
-      "Naoyuki Christopher Higaki's developer profile: software engineering skills, technology stack and three featured Android and ASP.NET Core projects.",
+      "Naoyuki Christopher Higaki's developer profile: software engineering skills, technology stack and three featured mobile and web-service projects.",
     ),
   component: Index,
 });
@@ -41,57 +41,28 @@ function Index() {
       <div className="grid gap-10 lg:grid-cols-[290px_1fr] lg:gap-14">
         <aside className="min-w-0">
           <div className="player-card mx-auto animate-rise">
-            <img
-              src={crest}
-              alt="Angular chrome developer crest with red highlights"
-              className="player-image"
-              width={768}
-              height={1024}
-            />
-            <div className="absolute left-5 top-4 z-10">
-              <p className="font-display text-5xl font-bold">DEV</p>
-              <p className="mt-1 font-mono text-[10px] text-muted-foreground">SOFTWARE ENGINEER</p>
-            </div>
-            <span className="absolute right-4 top-5 font-display text-sm text-primary">
-              NCH / 01
-            </span>
-            <div className="player-info pb-3 pt-4 text-center">
-              <p className="font-display text-3xl font-semibold uppercase">Naoyuki</p>
-              <p className="mb-4 mt-1 font-mono text-[10px] text-muted-foreground">
-                CHRISTOPHER HIGAKI
-              </p>
-              <div className="grid grid-cols-3 border-t border-border pt-3">
-                {[
-                  [PROFILE_STATS.languages, "LANG"],
-                  [PROFILE_STATS.platforms, "PLAT"],
-                  [PROFILE_STATS.projects, "PROJ"],
-                ].map(([n, l]) => (
-                  <div key={l}>
-                    <p className="font-display text-2xl font-semibold">{n}</p>
-                    <p className="font-mono text-[9px] text-muted-foreground">{l}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <div className="flex items-center justify-between px-4 py-3 font-mono text-[10px] text-muted-foreground"><span>DEVELOPER PROFILE</span><span className="text-primary">NCH / 01</span></div>
+            <img src={portrait} alt="Naoyuki's profile image: a white cat wearing glasses and a beret, holding a mug" className="player-image" width={1024} height={1024} />
+            <div className="player-info px-5 pb-5 pt-5"><p className="font-display text-3xl font-semibold uppercase">Naoyuki</p><p className="mt-1 text-xs text-muted-foreground">Software engineer</p><div className="mt-5 grid grid-cols-3 border-t border-border pt-4">{[[PROFILE_STATS.languages,"Languages"],[PROFILE_STATS.platforms,"Platforms"],[PROFILE_STATS.projects,"Projects"]].map(([n,l])=><div key={l}><p className="font-display text-2xl font-semibold">{n}</p><p className="mt-1 text-[10px] text-muted-foreground">{l}</p></div>)}</div></div>
           </div>
           <div className="mx-auto mt-6 max-w-80">
             <p className="text-lg font-semibold">Naoyuki Christopher Higaki</p>
             <p className="mt-1 font-mono text-sm text-muted-foreground">@Naoyuki-Christopher-H</p>
             <Button asChild variant="outline" className="mt-5 w-full">
               <a href={LINKS.githubPersonal} target="_blank" rel="noreferrer">
-                <Github />
-                View GitHub profile
+                <UserRound />
+                View code profile
                 <ArrowUpRight />
               </a>
             </Button>
             <div className="mt-5 space-y-3 border-b border-border pb-5 text-xs text-muted-foreground">
               <p className="flex items-center gap-2">
                 <Code2 className="size-4" />
-                Web · Desktop · Android
+                Web · Desktop · Mobile
               </p>
               <p className="flex items-center gap-2">
                 <Terminal className="size-4" />
-                Fedora Linux · macOS · Windows VMs
+                Local development · Virtual environments
               </p>
               <a
                 href={LINKS.linkedin}
@@ -100,22 +71,22 @@ function Index() {
                 className="flex items-center gap-2 hover:text-foreground"
               >
                 <ArrowUpRight className="size-4" />
-                Connect on LinkedIn
+                Professional contact
               </a>
             </div>
             <p className="mt-4 font-mono text-[10px] text-muted-foreground">
               INDEPENDENT DEVELOPER PROFILE
               <br />
-              NOT AFFILIATED WITH EA SPORTS
+              SOFTWARE · SYSTEMS · SOLUTIONS
             </p>
           </div>
         </aside>
         <div className="min-w-0">
           <p className="mb-3 flex items-center gap-2 font-mono text-xs text-primary">
             <span className="size-1.5 bg-primary" />
-            THE DEVELOPER XI
+            ENGINEERING PROFILE
           </p>
-          <h1 className="font-display text-5xl font-semibold uppercase leading-[1.02] sm:text-6xl">
+          <h1 className="font-display text-5xl font-semibold uppercase leading-[1.08] sm:text-6xl">
             Naoyuki Christopher
             <br />
             <span className="text-primary">Higaki.</span>
@@ -125,7 +96,7 @@ function Index() {
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
             Clean code. Practical solutions. Reliable software.
-            <br />I build across web, desktop and Android — bringing thoughtful engineering to every
+            <br />I build across web, desktop and mobile — bringing thoughtful engineering to every
             project.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -166,7 +137,7 @@ function Index() {
           <div className="mb-5 flex items-center justify-between">
             <h2 className="flex items-center gap-2 text-sm font-semibold">
               <Layers className="size-4 text-muted-foreground" />
-              Technical attributes
+              Technical capabilities
             </h2>
             <Link
               to="/about"
@@ -213,7 +184,7 @@ function Index() {
             ))}
           </div>
           <p className="mt-4 font-mono text-[10px] text-muted-foreground">
-            STACK OVERVIEW · COUNTS REFLECT LISTED SKILLS, NOT PROFICIENCY RATINGS
+            Skills and capabilities
           </p>
         </div>
       </div>
@@ -227,7 +198,7 @@ function Index() {
             </span>
           </h2>
           <div className="flex gap-1" aria-label="Project filters">
-            {["All", "Android", "Web API"].map((f) => (
+            {["All", "Mobile", "Web API"].map((f) => (
               <Button
                 key={f}
                 variant={filter === f ? "secondary" : "ghost"}
@@ -284,9 +255,9 @@ function Index() {
         <div className="flex items-center gap-4">
           <Laptop className="size-6 text-primary" />
           <div>
-            <h2 className="text-sm font-semibold">One engineer. Three environments.</h2>
+            <h2 className="text-sm font-semibold">One engineer. Three platforms.</h2>
             <p className="mt-1 text-xs text-muted-foreground">
-              Fedora Linux primary · macOS secondary · Windows for compatibility
+              Web applications · Desktop software · Mobile experiences
             </p>
           </div>
         </div>

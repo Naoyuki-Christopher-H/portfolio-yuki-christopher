@@ -18,13 +18,13 @@ export const POLICIES = {
         title: "Information and purposes",
         paragraphs: [
           "The portfolio does not ask visitors for account details. Hosting and error-reporting services may process technical information such as IP addresses, browser details, requested pages and error diagnostics for delivery, security and troubleshooting. Do not include sensitive information in a report.",
-          "When you contact the operator through LinkedIn, that service processes your message under its own terms and privacy policy. Information you send may be used to respond to your enquiry.",
+          "When you contact the operator through the external professional contact service, that service processes your message under its own terms and privacy policy. Information you send may be used to respond to your enquiry.",
         ],
       },
       {
         title: "Cookies and external services",
         paragraphs: [
-          "See the Cookie Policy for the distinction between site features and hosting or third-party technologies. GitHub, LinkedIn and LeetCode links open external services. Cryptocurrency transfers take place on public blockchains, not within this portfolio.",
+          "See the Cookie Policy for the distinction between site features and hosting or third-party technologies. External profile links open external services. Cryptocurrency transfers take place on public blockchains, not within this portfolio.",
         ],
       },
       {
@@ -43,7 +43,7 @@ export const POLICIES = {
       {
         title: "Privacy contact",
         paragraphs: [
-          "Use the LinkedIn contact link on the Contact page to reach Naoyuki Christopher Higaki. Identify the privacy concern and relevant page without sharing unnecessary personal information.",
+          "Use the professional contact link on the Contact page to reach Naoyuki Christopher Higaki. Identify the privacy concern and relevant page without sharing unnecessary personal information.",
         ],
       },
     ],
@@ -103,7 +103,7 @@ export const POLICIES = {
       {
         title: "External platforms and enforcement",
         paragraphs: [
-          "GitHub, LinkedIn and other services apply their own rules and enforcement. Concerns about conduct there should also be reported through that platform. The operator may decline abusive communications; no account restriction system exists on this site.",
+          "External services apply their own rules and enforcement. Concerns about conduct there should also be reported through that platform. The operator may decline abusive communications; no account restriction system exists on this site.",
         ],
       },
     ],
@@ -121,7 +121,7 @@ export const POLICIES = {
       {
         title: "Hosting and third-party technologies",
         paragraphs: [
-          "Hosting or delivery services may use technical cookies or similar technologies. This site's hosted configuration has not been independently audited, so this policy does not claim that all visits are cookie-free. Fonts are requested from Google Fonts, which receives technical request information.",
+          "Hosting or delivery services may use technical cookies or similar technologies. This site's hosted configuration has not been independently audited, so this policy does not claim that all visits are cookie-free. Fonts are requested from an external provider, which receives technical request information.",
           "External profile links take you to separate services that may set their own cookies. Their policies and controls apply when you visit them.",
         ],
       },
@@ -170,7 +170,7 @@ export const POLICIES = {
       {
         title: "How to report",
         paragraphs: [
-          "Use the LinkedIn contact link on the Contact page. Include the page URL, a clear description, relevant dates and non-sensitive supporting information. Do not transmit illegal material or private credentials. For a linked repository, use the repository's available reporting or issue tools as appropriate.",
+          "Use the professional contact link on the Contact page. Include the page URL, a clear description, relevant dates and non-sensitive supporting information. Do not transmit illegal material or private credentials. For a linked repository, use the repository's available reporting or issue tools as appropriate.",
         ],
       },
       {
@@ -195,7 +195,7 @@ export const POLICIES = {
       {
         title: "Submit a complaint",
         paragraphs: [
-          "Contact the operator through LinkedIn using the Contact page. Describe the concern, relevant URL, previous correspondence if any, and the resolution you seek. Avoid including unnecessary personal information.",
+          "Contact the operator through the external professional contact service using the Contact page. Describe the concern, relevant URL, previous correspondence if any, and the resolution you seek. Avoid including unnecessary personal information.",
         ],
       },
       {
@@ -213,7 +213,7 @@ export const POLICIES = {
       {
         title: "Portfolio content and third-party marks",
         paragraphs: [
-          "Respect the rights of the relevant creators. This portfolio's player-card presentation is independently designed and does not imply affiliation with EA SPORTS, FIFA, GitHub or Bugatti. References to products and platforms identify technologies or design influences, not endorsements.",
+          "Respect the rights of the relevant creators. This portfolio is independently maintained. External links do not imply affiliation, endorsement or permission to reuse third-party material.",
         ],
       },
       {
@@ -267,7 +267,7 @@ export const POLICIES = {
       {
         title: "Legal and privacy contact",
         paragraphs: [
-          "The available contact channel is the operator's LinkedIn profile, linked on the Contact page. Identify your enquiry as a legal, privacy, copyright or other concern. No dedicated legal email or physical notice address is currently published.",
+          "The available contact channel is the operator's external professional profile, linked on the Contact page. Identify your enquiry as a legal, privacy, copyright or other concern. No dedicated legal email or physical notice address is currently published.",
         ],
       },
       {
@@ -285,7 +285,7 @@ export const POLICIES = {
       {
         title: "No portfolio accounts",
         paragraphs: [
-          "This website does not create visitor accounts, so there is no on-site account to delete. Accounts on LinkedIn, GitHub or other linked platforms must be managed with those services.",
+          "This website does not create visitor accounts, so there is no on-site account to delete. Accounts on external platforms must be managed with those services.",
         ],
       },
       {

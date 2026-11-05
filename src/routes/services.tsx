@@ -5,7 +5,7 @@ export const Route = createFileRoute("/services")({
   head: () =>
     meta(
       "Services",
-      "Web, desktop, Android and database development services by Naoyuki Christopher Higaki.",
+      "Web, desktop, mobile and database development services by Naoyuki Christopher Higaki.",
     ),
   component: Services,
 });
@@ -13,29 +13,29 @@ export const Route = createFileRoute("/services")({
 const SERVICES = [
   [
     "Web Applications",
-    "Full-stack ASP.NET Core MVC apps with Razor views and Entity Framework Core.",
-    "C# · ASP.NET · EF Core",
+    "Server-rendered web applications with structured data access and maintainable architecture.",
+    "C# · Web architecture · Data mapping",
   ],
   [
     "Desktop Software",
-    "Polished Windows desktop tools built with WPF and XAML.",
-    "C# · WPF · XAML",
+    "Desktop applications with clear interfaces and structured presentation layers.",
+    "C# · Desktop interfaces · Declarative UI",
   ],
   [
-    "Android Apps",
-    "Native Android applications designed for performance and clarity.",
-    "Kotlin · Java · Android Studio",
+    "Mobile Applications",
+    "Native mobile applications designed for performance and clarity.",
+    "Kotlin · Java · Mobile development",
   ],
   [
     "Database Design",
     "Schemas, queries and stored procedures that scale.",
-    "SQL Server · T-SQL · Oracle · PL/SQL · MySQL",
+    "SQL · Relational design · Stored procedures",
   ],
   ["Systems Programming", "Efficient, low-level solutions where speed matters.", "C++"],
   [
-    "Code Review & Git Workflow",
+    "Code Review & Version Control",
     "Version control strategy, reviews and clean history.",
-    "Git · GitHub",
+    "Reviews · Branching · Change tracking",
   ],
 ];
 

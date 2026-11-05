@@ -11,21 +11,14 @@ export const Route = createFileRoute("/about")({
 });
 
 const GROUPS: [string, string[]][] = [
-  ["Programming Languages", ["Java", "C#", "JavaScript", "Kotlin", "PHP", "C++"]],
-  ["Web Technologies", ["HTML5", "CSS3", "Razor"]],
-  [
-    "Frameworks & Technologies",
-    ["ASP.NET Core MVC", "Entity Framework Core", "WPF", "XAML", "Android"],
-  ],
-  ["Databases & SQL", ["Microsoft SQL Server", "T-SQL", "MySQL", "Oracle SQL", "PL/SQL"]],
-  ["Version Control", ["Git", "GitHub"]],
-  [
-    "Tools & IDEs",
-    ["Visual Studio", "Visual Studio Code", "Android Studio", "Oracle SQL Developer"],
-  ],
-  ["Preferred OS", ["Fedora Linux (primary)", "macOS (secondary)", "Windows 10 & 11 (VMs)"]],
-  ["Focus", ["Software Engineering", "Software Development", "Computer Science"]],
-  ["Language", ["English"]],
+ ["Programming languages",["Java","C#","JavaScript","Kotlin","PHP","C++"]],
+ ["Web development",["Semantic markup","Stylesheets","Server-rendered views"]],
+ ["Application architecture",["Web architecture","Data mapping","Desktop interfaces","Declarative UI","Mobile applications"]],
+ ["Data and persistence",["Relational design","SQL queries","Stored procedures","Local storage"]],
+ ["Development workflow",["Version control","Code review","Development environments","Database tooling"]],
+ ["Working environment",["Local development","Secondary environments","Virtualized compatibility testing"]],
+ ["Focus",["Software engineering","Software development","Computer science"]],
+ ["Communication",["English"]],
 ];
 
 function About() {

@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import {
   Code2,
-  Github,
+  UserRound,
   ArrowUpRight,
   BookOpen,
   Layers,
@@ -59,21 +59,21 @@ export function Header() {
         </Link>
         <Button asChild variant="outline" size="sm">
           <a href={LINKS.githubPersonal} target="_blank" rel="noreferrer">
-            <Github /> <span className="hidden sm:inline">GitHub profile</span>
+            <UserRound /> <span className="hidden sm:inline">Code profile</span>
             <ArrowUpRight />
           </a>
         </Button>
       </div>
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-4 md:px-7"
+        className="mx-auto flex max-w-6xl gap-1 flex-wrap px-4 md:px-7"
       >
         {NAV.map(([to, label, Icon]) => (
           <Link
             key={to}
             to={to}
             activeOptions={{ exact: to === "/" }}
-            className="flex min-h-12 shrink-0 items-center gap-2 border-b-2 border-transparent px-3 text-xs text-muted-foreground transition-colors hover:text-foreground"
+            className="flex min-h-12 shrink-0 items-center gap-2 border-b-2 border-transparent px-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
             activeProps={{ className: "border-primary text-foreground" }}
           >
             <Icon className="size-4" />
@@ -112,7 +112,7 @@ export function Footer() {
             rel="noreferrer"
             className="hover:text-foreground"
           >
-            LinkedIn
+            Professional contact
           </a>
         </div>
       </div>
