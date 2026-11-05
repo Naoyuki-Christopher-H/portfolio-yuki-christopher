@@ -21,10 +21,22 @@ function NotFoundComponent() {
       <div className="animate-rise max-w-md text-center">
         <p className="text-sm font-medium text-rose">Error 404</p>
         <h1 className="mt-3 text-6xl font-semibold text-foreground">Lost in the code.</h1>
-        <p className="mt-4 text-foreground/70">This page doesn't exist or has moved. Let's get you back on track.</p>
+        <p className="mt-4 text-foreground/70">
+          This page doesn't exist or has moved. Let's get you back on track.
+        </p>
         <div className="mt-8 flex justify-center gap-3">
-          <Link to="/" className="rounded-full bg-primary px-6 py-2.5 text-sm text-primary-foreground hover:bg-rose">Go home</Link>
-          <Link to="/contact" className="rounded-full px-6 py-2.5 text-sm text-rose hover:underline">Contact</Link>
+          <Link
+            to="/"
+            className="rounded-full bg-primary px-6 py-2.5 text-sm text-primary-foreground hover:bg-rose"
+          >
+            Go home
+          </Link>
+          <Link
+            to="/contact"
+            className="rounded-full px-6 py-2.5 text-sm text-rose hover:underline"
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </div>
@@ -82,7 +94,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,

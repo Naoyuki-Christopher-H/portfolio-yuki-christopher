@@ -2,17 +2,41 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Card, CTA, meta, PageHero, Section } from "@/components/site";
 
 export const Route = createFileRoute("/services")({
-  head: () => meta("Services", "Web, desktop, Android and database development services by Naoyuki Christopher Higaki."),
+  head: () =>
+    meta(
+      "Services",
+      "Web, desktop, Android and database development services by Naoyuki Christopher Higaki.",
+    ),
   component: Services,
 });
 
 const SERVICES = [
-  ["Web Applications", "Full-stack ASP.NET Core MVC apps with Razor views and Entity Framework Core.", "C# · ASP.NET · EF Core"],
-  ["Desktop Software", "Polished Windows desktop tools built with WPF and XAML.", "C# · WPF · XAML"],
-  ["Android Apps", "Native Android applications designed for performance and clarity.", "Kotlin · Java · Android Studio"],
-  ["Database Design", "Schemas, queries and stored procedures that scale.", "SQL Server · T-SQL · Oracle · PL/SQL · MySQL"],
+  [
+    "Web Applications",
+    "Full-stack ASP.NET Core MVC apps with Razor views and Entity Framework Core.",
+    "C# · ASP.NET · EF Core",
+  ],
+  [
+    "Desktop Software",
+    "Polished Windows desktop tools built with WPF and XAML.",
+    "C# · WPF · XAML",
+  ],
+  [
+    "Android Apps",
+    "Native Android applications designed for performance and clarity.",
+    "Kotlin · Java · Android Studio",
+  ],
+  [
+    "Database Design",
+    "Schemas, queries and stored procedures that scale.",
+    "SQL Server · T-SQL · Oracle · PL/SQL · MySQL",
+  ],
   ["Systems Programming", "Efficient, low-level solutions where speed matters.", "C++"],
-  ["Code Review & Git Workflow", "Version control strategy, reviews and clean history.", "Git · GitHub"],
+  [
+    "Code Review & Git Workflow",
+    "Version control strategy, reviews and clean history.",
+    "Git · GitHub",
+  ],
 ];
 
 function Services() {
@@ -31,7 +55,9 @@ function Services() {
             </Card>
           ))}
         </div>
-        <div className="mt-16 text-center"><CTA to="/contact">Start a project</CTA></div>
+        <div className="mt-16 text-center">
+          <CTA to="/contact">Start a project</CTA>
+        </div>
       </Section>
     </>
   );
