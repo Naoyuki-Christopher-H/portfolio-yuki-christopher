@@ -14,4 +14,13 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+  it("does not expose the removed blog", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes("/blog").at(-1)?.routeId).toBe(rootRouteId);
+    expect(router.matchRoutes("/blog/linux-macos-windows-vms").at(-1)?.routeId).toBe(rootRouteId);
+  });
+  it.each(["privacy", "terms", "community-guidelines", "cookies", "content-moderation", "report-abuse", "complaints-and-appeals", "copyright", "disclaimer", "legal-notices", "data-rights", "child-safety"])("exposes the requested %s policy", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(`/${path}`).at(-1)?.routeId).toBe(`/${path}`);
+  });
 });
