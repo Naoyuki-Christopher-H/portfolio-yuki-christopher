@@ -10,15 +10,15 @@ export const Route = createFileRoute("/faq")({
 const QA = [
   [
     "What kind of projects do you take on?",
-    "Web apps with ASP.NET Core, Windows desktop software with WPF, Android apps, and database work.",
+    "Web applications, desktop software, mobile applications and database work.",
   ],
   ["Which languages do you use most?", "Java, C#, JavaScript, Kotlin, PHP and C++."],
-  ["Which databases do you work with?", "Microsoft SQL Server (T-SQL), MySQL and Oracle (PL/SQL)."],
-  ["How do I get in touch?", "Message me on LinkedIn — links are on the Contact page."],
-  ["Where can I see your code?", "On my personal, academic and professional GitHub profiles."],
+  ["Which databases do you work with?", "Relational database systems, SQL queries and stored procedures."],
+  ["How do I get in touch?", "Use the professional contact profile linked on the Contact page."],
+  ["Where can I see your code?", "On my personal, academic and professional code profiles."],
   [
     "Can I support your work?",
-    "Yes — Bitcoin and Ethereum addresses are listed on the Contact page.",
+    "Yes — Public contribution addresses are listed on the Contact page.",
   ],
 ];
 

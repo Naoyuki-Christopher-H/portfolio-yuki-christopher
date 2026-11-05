@@ -5,24 +5,24 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     meta(
       "Contact",
-      "Connect with Naoyuki Christopher Higaki on LinkedIn, GitHub and LeetCode, or support via crypto.",
+      "Connect with Naoyuki Christopher Higaki through professional, code and practice profiles.",
     ),
   component: Contact,
 });
 
 const PROFILES = [
-  ["LinkedIn", "naoyuki-christopher-higaki-yuki", LINKS.linkedin],
-  ["Personal GitHub", "Naoyuki-Christopher-H", LINKS.githubPersonal],
-  ["Academic GitHub", "HChristopherNaoyuki", LINKS.githubAcademic],
-  ["Professional GitHub", "NaoyukiChristopherYuki", LINKS.githubPro],
-  ["LeetCode", "YukiKapan", LINKS.leetcode],
+  ["Professional contact", "naoyuki-christopher-higaki-yuki", LINKS.linkedin],
+  ["Personal code profile", "Naoyuki-Christopher-H", LINKS.githubPersonal],
+  ["Academic code profile", "HChristopherNaoyuki", LINKS.githubAcademic],
+  ["Professional code profile", "NaoyukiChristopherYuki", LINKS.githubPro],
+  ["Coding practice profile", "YukiKapan", LINKS.leetcode],
 ];
 
 function Contact() {
   return (
     <>
       <PageHero eyebrow="Contact" title="Let's talk.">
-        The best way to reach me is on LinkedIn.
+        Reach me through my professional contact profile.
       </PageHero>
       <Section>
         <div className="grid gap-5 md:grid-cols-2">
@@ -36,10 +36,10 @@ function Contact() {
             </a>
           ))}
         </div>
-        <h2 className="mt-24 text-center text-3xl font-semibold">Support my work</h2>
+        <h2 className="mt-24 text-center text-3xl font-semibold">Public contribution addresses</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {Object.entries(WALLETS).map(([n, a]) => (
-            <Wallet key={n} name={n} address={a} />
+            <Wallet key={n} name={n === "Bitcoin" ? "Digital asset address · Network 01" : "Digital asset address · Network 02"} address={a} />
           ))}
         </div>
       </Section>
