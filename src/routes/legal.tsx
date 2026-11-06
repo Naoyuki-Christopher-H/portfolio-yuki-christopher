@@ -38,7 +38,7 @@ function Legal() {
             accounts, public uploads or on-site messaging. These policies reflect that scope.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-x-8 md:grid-cols-2">
           {Object.values(POLICIES).map((p, i) => {
             const path = PATHS[i];
             if (!path) return null;
@@ -46,14 +46,14 @@ function Legal() {
               <Link
                 key={p.title}
                 to={path}
-                className="group rounded-lg border border-border bg-card p-5 transition-colors hover:border-muted-foreground"
+                className="group border-b border-border py-6 transition-colors hover:border-primary"
               >
                 <div className="flex justify-between font-mono text-xs text-muted-foreground">
                   <span>{String(i + 1).padStart(2, "0")}</span>
                   <ArrowUpRight className="size-4 group-hover:text-primary" />
                 </div>
                 <h2 className="mb-3 mt-5 text-base font-semibold">{p.title}</h2>
-                <p className="text-xs leading-6 text-muted-foreground">{p.description}</p>
+                <p className="text-sm leading-7 text-muted-foreground">{p.description}</p>
               </Link>
             );
           })}
