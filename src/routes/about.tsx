@@ -11,14 +11,32 @@ export const Route = createFileRoute("/about")({
 });
 
 const GROUPS: [string, string[]][] = [
- ["Programming languages",["Java","C#","JavaScript","Kotlin","PHP","C++"]],
- ["Web development",["Semantic markup","Stylesheets","Server-rendered views"]],
- ["Application architecture",["Web architecture","Data mapping","Desktop interfaces","Declarative UI","Mobile applications"]],
- ["Data and persistence",["Relational design","SQL queries","Stored procedures","Local storage"]],
- ["Development workflow",["Version control","Code review","Development environments","Database tooling"]],
- ["Working environment",["Local development","Secondary environments","Virtualized compatibility testing"]],
- ["Focus",["Software engineering","Software development","Computer science"]],
- ["Communication",["English"]],
+  ["Programming languages", ["Java", "C#", "JavaScript", "Kotlin", "PHP", "C++"]],
+  ["Web development", ["Semantic markup", "Stylesheets", "Server-rendered views"]],
+  [
+    "Application architecture",
+    [
+      "Web architecture",
+      "Data mapping",
+      "Desktop interfaces",
+      "Declarative UI",
+      "Mobile applications",
+    ],
+  ],
+  [
+    "Data and persistence",
+    ["Relational design", "SQL queries", "Stored procedures", "Local storage"],
+  ],
+  [
+    "Development workflow",
+    ["Version control", "Code review", "Development environments", "Database tooling"],
+  ],
+  [
+    "Working environment",
+    ["Local development", "Secondary environments", "Virtualized compatibility testing"],
+  ],
+  ["Focus", ["Software engineering", "Software development", "Computer science"]],
+  ["Communication", ["English"]],
 ];
 
 function About() {

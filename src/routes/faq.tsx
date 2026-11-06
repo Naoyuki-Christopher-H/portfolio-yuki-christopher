@@ -13,7 +13,10 @@ const QA = [
     "Web applications, desktop software, mobile applications and database work.",
   ],
   ["Which languages do you use most?", "Java, C#, JavaScript, Kotlin, PHP and C++."],
-  ["Which databases do you work with?", "Relational database systems, SQL queries and stored procedures."],
+  [
+    "Which databases do you work with?",
+    "Relational database systems, SQL queries and stored procedures.",
+  ],
   ["How do I get in touch?", "Use the professional contact profile linked on the Contact page."],
   ["Where can I see your code?", "On my personal, academic and professional code profiles."],
   [

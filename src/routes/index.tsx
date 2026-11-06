@@ -41,9 +41,33 @@ function Index() {
       <div className="grid gap-10 lg:grid-cols-[290px_1fr] lg:gap-14">
         <aside className="min-w-0">
           <div className="player-card mx-auto animate-rise">
-            <div className="flex items-center justify-between px-4 py-3 font-mono text-[10px] text-muted-foreground"><span>DEVELOPER PROFILE</span><span className="text-primary">NCH / 01</span></div>
-            <img src={portrait} alt="Naoyuki's profile image: a white cat wearing glasses and a beret, holding a mug" className="player-image" width={1024} height={1024} />
-            <div className="player-info px-5 pb-5 pt-5"><p className="font-display text-3xl font-semibold uppercase">Naoyuki</p><p className="mt-1 text-xs text-muted-foreground">Software engineer</p><div className="mt-5 grid grid-cols-3 border-t border-border pt-4">{[[PROFILE_STATS.languages,"Languages"],[PROFILE_STATS.platforms,"Platforms"],[PROFILE_STATS.projects,"Projects"]].map(([n,l])=><div key={l}><p className="font-display text-2xl font-semibold">{n}</p><p className="mt-1 text-[10px] text-muted-foreground">{l}</p></div>)}</div></div>
+            <div className="flex items-center justify-between px-4 py-3 font-mono text-[10px] text-muted-foreground">
+              <span>DEVELOPER PROFILE</span>
+              <span className="text-primary">NCH / 01</span>
+            </div>
+            <img
+              src={portrait}
+              alt="Naoyuki's profile image: a white cat wearing glasses and a beret, holding a mug"
+              className="player-image"
+              width={1024}
+              height={1024}
+            />
+            <div className="player-info px-5 pb-5 pt-5">
+              <p className="font-display text-3xl font-semibold uppercase">Naoyuki</p>
+              <p className="mt-1 text-xs text-muted-foreground">Software engineer</p>
+              <div className="mt-5 grid grid-cols-3 border-t border-border pt-4">
+                {[
+                  [PROFILE_STATS.languages, "Languages"],
+                  [PROFILE_STATS.platforms, "Platforms"],
+                  [PROFILE_STATS.projects, "Projects"],
+                ].map(([n, l]) => (
+                  <div key={l}>
+                    <p className="font-display text-2xl font-semibold">{n}</p>
+                    <p className="mt-1 text-[10px] text-muted-foreground">{l}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="mx-auto mt-6 max-w-80">
             <p className="text-lg font-semibold">Naoyuki Christopher Higaki</p>

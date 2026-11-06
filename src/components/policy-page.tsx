@@ -38,7 +38,11 @@ export function PolicyPage({ policyKey }: { policyKey: PolicyKey }) {
           </p>
           <div className="space-y-9">
             {p.sections.map((s, i) => (
-              <section id={`section-${i + 1}`} key={s.title} className="scroll-mt-8 border-b border-border pb-8 last:border-0">
+              <section
+                id={`section-${i + 1}`}
+                key={s.title}
+                className="scroll-mt-8 border-b border-border pb-8 last:border-0"
+              >
                 <h2 className="mb-4 text-xl font-semibold">{s.title}</h2>
                 {s.paragraphs.map((text) => (
                   <p key={text} className="mt-3 text-base leading-8 text-muted-foreground">
@@ -55,7 +59,10 @@ export function PolicyPage({ policyKey }: { policyKey: PolicyKey }) {
                 <ArrowUpRight />
               </a>
             </Button>
-            <p className="mt-4 text-xs leading-6 text-muted-foreground">For enquiries about privacy, content or these policies, use the professional contact channel.</p>
+            <p className="mt-4 text-xs leading-6 text-muted-foreground">
+              For enquiries about privacy, content or these policies, use the professional contact
+              channel.
+            </p>
           </div>
         </article>
       </div>
