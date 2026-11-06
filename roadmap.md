@@ -1,7 +1,7 @@
 # Portfolio update
-- [ ] Polish the main page and replace the crest with an enhanced profile portrait.
-- [ ] Make visible content and metadata brand-independent across all pages.
-- [ ] Refine policy navigation and verify phone/desktop consistency.
+- [x] Polish the main page and replace the crest with an enhanced profile portrait.
+- [x] Make visible content and metadata brand-independent across all pages.
+- [x] Refine policy navigation and verify phone/desktop consistency.
 - [x] Redesign the portfolio with GitHub-style navigation, player card and factual skill statistics.
 - [x] Remove the blog and add all twelve supplied legal policies.
 - [x] Verify navigation, policy pages and desktop/mobile layouts.

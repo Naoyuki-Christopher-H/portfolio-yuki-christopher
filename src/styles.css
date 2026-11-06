@@ -45,7 +45,7 @@
   --primary-hover: oklch(0.63 0.215 23.906951);
   --card: oklch(0.145 0 0);
   --secondary: oklch(0.185 0 0);
-  --muted-foreground: oklch(0.7 0 0);
+  --muted-foreground: oklch(0.76 0 0);
   --border: oklch(0.28 0 0);
   --language-mobile: oklch(0.72 0.12 300);
   --language-api: oklch(0.76 0.15 145);
@@ -104,9 +104,9 @@
   position: relative;
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 0.7;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
   background: var(--card);
   border-top: 3px solid var(--primary);
 }
@@ -119,17 +119,12 @@
   clip-path: inherit;
 }
 .player-image {
-  position: absolute;
-  inset: 80px 0 auto;
-  height: 49%;
+  display: block;
+  aspect-ratio: 1;
   width: 100%;
   object-fit: cover;
 }
 .player-info {
-  position: absolute;
-  bottom: 13%;
-  left: 22px;
-  right: 22px;
   background: var(--background);
 }
 .stat-line {

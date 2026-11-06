@@ -2,5 +2,47 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Card, meta, PageHero, Section, Pill } from "@/components/site";
 import { PROJECTS } from "@/content/portfolio";
-export const Route = createFileRoute("/testimonials")({head:()=>meta("Featured Projects","Three selected software projects by Naoyuki Christopher Higaki, spanning mobile applications and a documented web service."),component:Projects});
-function Projects(){return <><PageHero eyebrow="Selected work" title="Practical problems. Thoughtful solutions.">Three projects spanning mobile applications and a documented web service.</PageHero><Section><div className="grid gap-5 md:grid-cols-3">{PROJECTS.map(p=><Card key={p.name} className="flex h-full flex-col"><p className="text-xs text-primary">{p.category} · {p.language}</p><h2 className="mt-4 text-xl font-semibold">{p.name}</h2><p className="mb-6 mt-4 text-sm leading-7 text-muted-foreground">{p.description}</p><div className="mb-6 flex flex-wrap gap-2">{p.tags.map(t=><Pill key={t}>{t}</Pill>)}</div><a href={p.url} target="_blank" rel="noreferrer" className="mt-auto inline-flex min-h-11 items-center gap-2 text-sm font-medium underline decoration-primary underline-offset-4">View source code<ArrowUpRight aria-hidden="true" className="size-4"/></a></Card>)}</div></Section></>}
+export const Route = createFileRoute("/testimonials")({
+  head: () =>
+    meta(
+      "Featured Projects",
+      "Three selected software projects by Naoyuki Christopher Higaki, spanning mobile applications and a documented web service.",
+    ),
+  component: Projects,
+});
+function Projects() {
+  return (
+    <>
+      <PageHero eyebrow="Selected work" title="Practical problems. Thoughtful solutions.">
+        Three projects spanning mobile applications and a documented web service.
+      </PageHero>
+      <Section>
+        <div className="grid gap-5 md:grid-cols-3">
+          {PROJECTS.map((p) => (
+            <Card key={p.name} className="flex h-full flex-col">
+              <p className="text-xs text-primary">
+                {p.category} · {p.language}
+              </p>
+              <h2 className="mt-4 text-xl font-semibold">{p.name}</h2>
+              <p className="mb-6 mt-4 text-sm leading-7 text-muted-foreground">{p.description}</p>
+              <div className="mb-6 flex flex-wrap gap-2">
+                {p.tags.map((t) => (
+                  <Pill key={t}>{t}</Pill>
+                ))}
+              </div>
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-auto inline-flex min-h-11 items-center gap-2 text-sm font-medium underline decoration-primary underline-offset-4"
+              >
+                View source code
+                <ArrowUpRight aria-hidden="true" className="size-4" />
+              </a>
+            </Card>
+          ))}
+        </div>
+      </Section>
+    </>
+  );
+}

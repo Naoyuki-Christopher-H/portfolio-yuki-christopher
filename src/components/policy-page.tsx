@@ -11,7 +11,7 @@ export function PolicyPage({ policyKey }: { policyKey: PolicyKey }) {
         {p.description}
       </PageHero>
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-10 md:grid-cols-[220px_1fr]">
-        <aside>
+        <aside className="self-start md:sticky md:top-8">
           <Link
             to="/legal"
             className="mb-7 flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground"
@@ -25,7 +25,7 @@ export function PolicyPage({ policyKey }: { policyKey: PolicyKey }) {
               <a
                 key={s.title}
                 href={`#section-${i + 1}`}
-                className="block text-xs leading-5 text-muted-foreground hover:text-foreground"
+                className="block border-l border-border py-1 pl-3 text-sm leading-6 text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
               >
                 {String(i + 1).padStart(2, "0")} / {s.title}
               </a>
@@ -34,14 +34,18 @@ export function PolicyPage({ policyKey }: { policyKey: PolicyKey }) {
         </aside>
         <article className="max-w-3xl">
           <p className="mb-8 border-b border-border pb-5 font-mono text-xs text-muted-foreground">
-            Last updated: 4 November 2026 · Public portfolio
+            Last updated: 5 November 2026 · Public portfolio
           </p>
           <div className="space-y-9">
             {p.sections.map((s, i) => (
-              <section id={`section-${i + 1}`} key={s.title} className="scroll-mt-8">
+              <section
+                id={`section-${i + 1}`}
+                key={s.title}
+                className="scroll-mt-8 border-b border-border pb-8 last:border-0"
+              >
                 <h2 className="mb-4 text-xl font-semibold">{s.title}</h2>
                 {s.paragraphs.map((text) => (
-                  <p key={text} className="mt-3 text-sm leading-7 text-muted-foreground">
+                  <p key={text} className="mt-3 text-base leading-8 text-muted-foreground">
                     {text}
                   </p>
                 ))}
@@ -55,6 +59,10 @@ export function PolicyPage({ policyKey }: { policyKey: PolicyKey }) {
                 <ArrowUpRight />
               </a>
             </Button>
+            <p className="mt-4 text-xs leading-6 text-muted-foreground">
+              For enquiries about privacy, content or these policies, use the professional contact
+              channel.
+            </p>
           </div>
         </article>
       </div>
