@@ -41,12 +41,12 @@ Paths below are relative to this directory.
 | File               | Public URL      | Responsibility                                                                       |
 | ------------------ | --------------- | ------------------------------------------------------------------------------------ |
 | `__root.tsx`       | All pages       | Document shell, shared navigation and footer, query provider and error screens.      |
-| `index.tsx`        | `/`             | Portfolio introduction and overview.                                                 |
-| `about.tsx`        | `/about`        | Background, skills, tools and operating-system preferences.                          |
+| `index.tsx`        | `/`             | Player card, attributes, skill tabs and pinned projects.                              |
+| `about.tsx`        | `/about`        | Technical skills, focus areas and operating-system preferences.                      |
 | `services.tsx`     | `/services`     | Development services.                                                                |
 | `testimonials.tsx` | `/testimonials` | Three featured projects and external repository links; navigation label is Projects. |
 | `faq.tsx`          | `/faq`          | Expandable questions and answers.                                                    |
-| `contact.tsx`      | `/contact`      | External profiles and support wallet addresses.                                      |
+| `contact.tsx`      | `/contact`      | External profiles, opportunity status and public wallet addresses.                    |
 | `privacy.tsx`      | `/privacy`      | Privacy information.                                                                 |
 | `terms.tsx`        | `/terms`        | Website terms.                                                                       |
 
@@ -192,13 +192,13 @@ Canonical tags are not currently implemented. If adding them, use the approved p
 | ----------------------------- | --------------------------------------------------------------------------------------------------- |
 | `src/components/site.tsx`     | Shared navigation, footer, metadata, profile URLs, wallet addresses and portfolio display elements. |
 | `src/components/ui/`          | Reusable controls and interface primitives.                                                         |
-| `src/routes/index.tsx`        | Home-page technology stack and introductory sections.                                               |
-| `src/routes/about.tsx`        | Skill and background groups.                                                                        |
+| `src/routes/index.tsx`        | Player card, attributes, skill tabs and project summaries.                                            |
+| `src/routes/about.tsx`        | Skill groups, focus areas and operating-system preferences.                                           |
 | `src/routes/services.tsx`     | Service descriptions.                                                                               |
 | `src/routes/testimonials.tsx` | Featured project summaries and repository links.                                                    |
-| `src/routes/contact.tsx`      | Visible profile names and contact layout.                                                           |
+| `src/routes/contact.tsx`      | Visible profile names, opportunity status and contact layout.                                        |
 | `src/routes/faq.tsx`          | Questions and answers.                                                                              |
-| `src/content/portfolio.ts`    | Overview skills and pinned project data.                                                            |
+| `src/content/portfolio.ts`    | Profile attributes, skills, preferred environment, focus areas, statistics and pinned project data. |
 | `src/content/legal.ts`        | Structured legal policies.                                                                          |
 | `src/styles.css`              | Semantic design tokens, global styles and motion preferences.                                       |
 

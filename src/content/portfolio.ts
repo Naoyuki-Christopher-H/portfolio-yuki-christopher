@@ -1,22 +1,36 @@
 export const SKILL_GROUPS = {
-  Languages: ["Java", "C#", "JavaScript", "Kotlin", "PHP", "C++"],
+  Languages: ["C#", "C++", "C", "Python", "Java", "Kotlin", "PHP", "JavaScript", "SQL", "T-SQL"],
   Frameworks: [
-    "Web architecture",
-    "Data mapping",
-    "Desktop interfaces",
-    "Declarative UI",
-    "Mobile applications",
+    "ASP.NET Core MVC",
+    "Entity Framework Core",
+    "WPF",
+    "XAML",
+    "Razor",
+    "Android",
   ],
-  Databases: ["Relational design", "SQL queries", "Stored procedures"],
+  Web: ["HTML", "CSS"],
+  Databases: ["SQL Server", "MySQL", "Oracle"],
   Tools: [
-    "Version control",
-    "Code review",
-    "Development environments",
-    "Code editing",
-    "Mobile tooling",
-    "Database tooling",
+    "Git",
+    "GitHub",
+    "Visual Studio",
+    "Android Studio",
+    "Oracle SQL Developer",
   ],
 };
+export const PLAYER_ATTRIBUTES = [
+  { name: "Problem Solving", rating: 79 },
+  { name: "Code Quality", rating: 79 },
+  { name: "Technical Accuracy", rating: 79 },
+  { name: "Clarity & Simplicity", rating: 79 },
+  { name: "Mathematics", rating: 79 },
+  { name: "Computer Science", rating: 79 },
+];
+export const PREFERRED_ENVIRONMENT = [
+  { name: "Fedora Linux", usage: "Primary" },
+  { name: "Windows 11", usage: "Virtual machine" },
+];
+export const FOCUS_AREAS = ["Software Engineering", "Software Development"];
 export const PROJECTS = [
   {
     name: "Offline Expense Tracker",

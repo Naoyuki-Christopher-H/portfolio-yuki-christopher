@@ -12,5 +12,5 @@
 - Content pages use the shared `meta` helper for unique title, description and social metadata; keep metadata aligned with visible content.
 - Shared surface transitions, control hover colors and shadows are defined as semantic tokens in src/styles.css so palette changes remain consistent across pages.
 
-- Keep browser-safe portfolio skills and projects in a shared content module so displayed counts derive from the same facts.
+- Keep browser-safe portfolio skills, player attributes, preferred environment, focus areas and projects in one shared content module so pages and displayed counts derive from the same facts.
 - Legal pages share structured policy content and a renderer, with individual file routes and metadata for independent URLs.

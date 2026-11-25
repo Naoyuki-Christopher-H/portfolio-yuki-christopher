@@ -5,7 +5,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     meta(
       "Contact",
-      "Connect with Naoyuki Christopher Higaki through professional, code and practice profiles.",
+      "Connect with Naoyuki Christopher Higaki through professional, code and practice profiles. Open to graduate programs, internships and entry-level opportunities.",
     ),
   component: Contact,
 });
@@ -21,8 +21,9 @@ const PROFILES = [
 function Contact() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Let's talk.">
-        Reach me through my professional contact profile.
+      <PageHero eyebrow="Contact" title="Open to opportunities.">
+        I'm looking for graduate programs, internships and entry-level opportunities. Reach me
+        through my professional contact profile.
       </PageHero>
       <Section>
         <div className="grid gap-5 md:grid-cols-2">

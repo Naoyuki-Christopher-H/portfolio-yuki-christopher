@@ -14,13 +14,18 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LINKS, meta, Pill } from "@/components/site";
-import { SKILL_GROUPS, PROJECTS, PROFILE_STATS } from "@/content/portfolio";
+import {
+  SKILL_GROUPS,
+  PROJECTS,
+  PROFILE_STATS,
+  PLAYER_ATTRIBUTES,
+} from "@/content/portfolio";
 import portrait from "@/assets/profile-enhanced.jpg";
 export const Route = createFileRoute("/")({
   head: () =>
     meta(
       "Developer Profile",
-      "Naoyuki Christopher Higaki's developer profile: software engineering skills, technology stack and three featured mobile and web-service projects.",
+      "Naoyuki Christopher Higaki's software developer profile, with player attributes, technical skills and three featured projects.",
     ),
   component: Index,
 });
@@ -53,8 +58,8 @@ function Index() {
               height={1024}
             />
             <div className="player-info px-5 pb-5 pt-5">
-              <p className="font-display text-3xl font-semibold uppercase">Naoyuki</p>
-              <p className="mt-1 text-xs text-muted-foreground">Software engineer</p>
+              <p className="font-display text-3xl font-semibold uppercase">Yuki</p>
+              <p className="mt-1 text-xs text-muted-foreground">Software Developer</p>
               <div className="mt-5 grid grid-cols-3 border-t border-border pt-4">
                 {[
                   [PROFILE_STATS.languages, "Languages"],
@@ -116,7 +121,7 @@ function Index() {
             <span className="text-primary">Higaki.</span>
           </h1>
           <p className="mt-4 text-lg font-medium">
-            Software engineer. Built for the next challenge.
+            Software developer. Built for the next challenge.
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
             Clean code. Practical solutions. Reliable software.
@@ -210,6 +215,28 @@ function Index() {
           <p className="mt-4 font-mono text-[10px] text-muted-foreground">
             Skills and capabilities
           </p>
+          <section
+            aria-labelledby="player-attributes-heading"
+            className="mt-9 border-t border-border pt-7"
+          >
+            <div className="mb-5 flex items-center justify-between gap-3">
+              <h2 id="player-attributes-heading" className="text-sm font-semibold">
+                Player attributes
+              </h2>
+              <span className="font-mono text-[10px] text-muted-foreground">CORE / 79</span>
+            </div>
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
+              {PLAYER_ATTRIBUTES.map(({ name, rating }) => (
+                <div key={name}>
+                  <div className="mb-1 flex items-start justify-between gap-2">
+                    <dt className="font-mono text-[11px] text-muted-foreground">{name}</dt>
+                    <dd className="font-display text-xl font-semibold">{rating}</dd>
+                  </div>
+                  <div className="stat-line" />
+                </div>
+              ))}
+            </dl>
+          </section>
         </div>
       </div>
       <section className="mt-14 border-t border-border pt-8">
@@ -218,7 +245,7 @@ function Index() {
             <GitBranch className="size-4 text-primary" />
             Pinned projects
             <span className="ml-1 rounded-full bg-secondary px-2 py-0.5 text-xs text-muted-foreground">
-              3
+              {PROJECTS.length}
             </span>
           </h2>
           <div className="flex gap-1" aria-label="Project filters">
@@ -279,7 +306,7 @@ function Index() {
         <div className="flex items-center gap-4">
           <Laptop className="size-6 text-primary" />
           <div>
-            <h2 className="text-sm font-semibold">One engineer. Three platforms.</h2>
+            <h2 className="text-sm font-semibold">One developer. Three platforms.</h2>
             <p className="mt-1 text-xs text-muted-foreground">
               Web applications · Desktop software · Mobile experiences
             </p>

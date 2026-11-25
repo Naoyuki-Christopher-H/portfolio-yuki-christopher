@@ -12,3 +12,5 @@
 - [x] Harmonize the website palette and transitions without changing content.
 - [x] Add the supplied README disclaimer with a linked contents entry.
 - [x] Verify the polished pages and README requirements.
+- [ ] Apply the newly supplied role, player ratings, skills, operating-system preferences and opportunity details.
+- [ ] Update documentation and factual-content tests, then verify the portfolio at desktop and mobile sizes.

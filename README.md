@@ -1,6 +1,6 @@
 # Naoyuki Christopher Higaki Portfolio
 
-A personal portfolio website presenting software engineering
+A personal portfolio website presenting software development
 services, selected projects, professional profiles and legal policies.
 The overview combines a player-card profile with a developer-focused interface.
 
@@ -236,9 +236,11 @@ offerings.
 
 ### Skills and Legal Policies
 
-`src/content/portfolio.ts` stores overview skills and pinned project data.
-The overview shows counts of listed languages, platforms and projects,
-not invented proficiency scores, years of experience or live GitHub metrics.
+`src/content/portfolio.ts` stores player attributes, skills, preferred
+operating systems, focus areas and pinned project data. The overview shows
+counts derived from the listed languages, platforms and projects. The six
+player attribute ratings are supplied by the portfolio owner; do not infer
+additional scores, years of experience or live profile metrics.
 Skill-category tabs and project filters operate locally without saving data.
 
 `src/content/legal.ts` stores twelve policies. Each policy has its own route
